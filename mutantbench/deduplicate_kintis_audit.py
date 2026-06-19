@@ -1,12 +1,12 @@
 """Audit and optionally remove redundant Kintis mutant records in dataset.ttl.
 
-Kintis mutants were ingested twice: once with schema:contributor (convert.py)
-and again with schema:citation. When both Kintis records share the same
-equivalence label, the contributor record is redundant.
+Duplicate detection groups records by program, identical -/+ patch lines, and
+source line numbers within +/-1 (Kintis re-imports often differ by one line in
+the diff hunk header). Within such a cluster, a schema:contributor Kintis record
+is redundant when a schema:citation Kintis record exists with the same label.
 
-Groups with a conflicting Houshmand label are reported but still deduplicated,
-because this script removes only redundant Kintis copies and does not resolve
-cross-source label conflicts.
+Cross-source label conflicts (e.g. Kintis EQ vs Houshmand NEQ) are reported but
+do not block deduplication of the redundant Kintis contributor copy.
 """
 
 from __future__ import annotations
@@ -19,14 +19,20 @@ from pathlib import Path
 DATASET = Path(__file__).resolve().parent / 'dataset.ttl'
 KINTIS = 'kintis2016analysing'
 HOUSHMAND = 'houshmand2017tce'
+LINE_TOLERANCE = 1
 
 
-def normalize_diff(diff: str) -> str:
+def patch_lines(diff: str) -> str:
     lines = [
         line for line in diff.strip().split('\n')
         if line.startswith('-') or line.startswith('+')
     ]
     return '\n'.join(sorted(lines))
+
+
+def parse_old_line(diff: str) -> int | None:
+    match = re.search(r'@@ -(\d+)(?:,\d+)? \+(\d+)(?:,\d+)? @@', diff)
+    return int(match.group(1)) if match else None
 
 
 def parse_mutant_blocks(content: str) -> list[tuple[str, dict]]:
@@ -43,6 +49,7 @@ def parse_mutant_blocks(content: str) -> list[tuple[str, dict]]:
         equiv = re.search(r'mb:equivalence "([^"]+)"', block)
         if not diff_match or not program_match:
             continue
+        diff = diff_match.group(1)
         records.append((block, {
             'block_id': mutant_id.group(1),
             'program': program_match.group(1),
@@ -53,43 +60,82 @@ def parse_mutant_blocks(content: str) -> list[tuple[str, dict]]:
                 'contributor' if contributor else None
             ),
             'equiv': equiv.group(1) if equiv else None,
-            'norm_diff': normalize_diff(diff_match.group(1)),
+            'patch_lines': patch_lines(diff),
+            'old_line': parse_old_line(diff),
         }))
     return records
 
 
+def cluster_by_line(records: list[dict]) -> list[list[dict]]:
+    """Group records whose old_line values are within LINE_TOLERANCE."""
+    size = len(records)
+    parent = list(range(size))
+
+    def find(index: int) -> int:
+        while parent[index] != index:
+            parent[index] = parent[parent[index]]
+            index = parent[index]
+        return index
+
+    def union(left: int, right: int) -> None:
+        root_left, root_right = find(left), find(right)
+        if root_left != root_right:
+            parent[root_right] = root_left
+
+    for i in range(size):
+        line_i = records[i]['old_line']
+        if line_i is None:
+            continue
+        for j in range(i + 1, size):
+            line_j = records[j]['old_line']
+            if line_j is not None and abs(line_i - line_j) <= LINE_TOLERANCE:
+                union(i, j)
+
+    clusters: dict[int, list[dict]] = defaultdict(list)
+    for index, record in enumerate(records):
+        clusters[find(index)].append(record)
+    return list(clusters.values())
+
+
 def find_removals(records: list[tuple[str, dict]]) -> tuple[list[dict], list[tuple], list[tuple]]:
-    by_key: dict[tuple[str, str], list[dict]] = defaultdict(list)
+    by_patch: dict[tuple[str, str], list[dict]] = defaultdict(list)
     for _, meta in records:
-        by_key[(meta['program'], meta['norm_diff'])].append(meta)
+        by_patch[(meta['program'], meta['patch_lines'])].append(meta)
 
     to_remove: list[dict] = []
     reported_conflicts: list[tuple] = []
     skipped_other: list[tuple] = []
 
-    for key, group in by_key.items():
-        kintis = [r for r in group if r['paper'] == KINTIS]
-        if len(kintis) != 2 or {r['schema'] for r in kintis} != {'contributor', 'citation'}:
-            continue
-        if len({r['equiv'] for r in kintis}) != 1:
-            skipped_other.append((key, group, 'kintis label mismatch'))
-            continue
+    for patch_key, bucket in by_patch.items():
+        for cluster in cluster_by_line(bucket):
+            if len(cluster) < 2:
+                continue
 
-        kintis_equiv = kintis[0]['equiv']
-        houshmand = [r for r in group if r['paper'] == HOUSHMAND]
-        others = [r for r in group if r['paper'] not in (KINTIS, HOUSHMAND)]
-        if others:
-            skipped_other.append((key, group, 'unexpected extra sources'))
-            continue
+            kintis = [r for r in cluster if r['paper'] == KINTIS]
+            if len(kintis) != 2 or {r['schema'] for r in kintis} != {'contributor', 'citation'}:
+                continue
+            if len({r['equiv'] for r in kintis}) != 1:
+                skipped_other.append((patch_key, cluster, 'kintis label mismatch'))
+                continue
 
-        if len(houshmand) == 1:
-            if houshmand[0]['equiv'] != kintis_equiv:
-                reported_conflicts.append((key, group))
-            to_remove.append([r for r in kintis if r['schema'] == 'contributor'][0])
-        elif len(houshmand) == 0 and len(group) == 2:
-            to_remove.append([r for r in kintis if r['schema'] == 'contributor'][0])
-        else:
-            skipped_other.append((key, group, f'houshmand={len(houshmand)} total={len(group)}'))
+            kintis_equiv = kintis[0]['equiv']
+            houshmand = [r for r in cluster if r['paper'] == HOUSHMAND]
+            others = [r for r in cluster if r['paper'] not in (KINTIS, HOUSHMAND)]
+            if others:
+                skipped_other.append((patch_key, cluster, 'unexpected extra sources'))
+                continue
+
+            cluster_key = (patch_key, tuple(sorted(r['block_id'] for r in cluster)))
+            if len(houshmand) == 1:
+                if houshmand[0]['equiv'] != kintis_equiv:
+                    reported_conflicts.append((cluster_key, cluster))
+                to_remove.append([r for r in kintis if r['schema'] == 'contributor'][0])
+            elif len(houshmand) == 0 and len(cluster) == 2:
+                to_remove.append([r for r in kintis if r['schema'] == 'contributor'][0])
+            else:
+                skipped_other.append((
+                    patch_key, cluster, f'houshmand={len(houshmand)} total={len(cluster)}'
+                ))
 
     return to_remove, reported_conflicts, skipped_other
 
@@ -120,6 +166,7 @@ def main() -> None:
         by_program[record['program']] += 1
 
     print(f'Mutant blocks parsed: {len(records)}')
+    print(f'Line tolerance: +/-{LINE_TOLERANCE}')
     print(f'Redundant contributor records to remove: {len(to_remove)}')
     print(f'Reported cross-source label conflicts: {len(conflicts)}')
     print(f'Skipped other patterns: {len(skipped)}')
