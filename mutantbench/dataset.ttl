@@ -303,15 +303,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:program <mb:program#Vector3D.java> .
 
-<mb:mutant#017b681e5cbbdbfd92cdf9971e758a1c84f2def1> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (true) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#017ba621e8ed0e036c406fb562eed7f79e92a0e9> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -72 +72 @@
@@ -371,16 +362,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#CR> ;
     mb:program <mb:program#ArrayUtils.java> .
-
-<mb:mutant#01b1446407225cf63e8a6e24e2aed93e8c01fcf2> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -27 +27 @@
--            trian = trian + 2;
-+            trian = trian % 2;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#01b2949f42ebe32a1b4314d923aaca40091e4eca> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -1698,15 +1679,6 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#09f82dc4eee7530703aafe5a13b4e837123e3bdd> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if ((a + b < c || a + c < b) != b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#0a0b857780bb23164e398074e82d8c8f2fc2cbfa> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -28 +28 @@
@@ -2513,16 +2485,6 @@
         <mb:operator#VDL> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#0d833c9f69d9d44feb7edff416445e10a275f61a> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c || a + c != b || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#SEOR> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#0d8bcb75d1eebf992638fe4782b759daad36dfd6> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -730 +730 @@
@@ -2532,16 +2494,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#CR> ;
     mb:program <mb:program#ArrayUtils.java> .
-
-<mb:mutant#0d98caf7226a2c4d6a4e123e8a1b922a2f6822cd> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -30 +30 @@
--            trian = trian + 3;
-+            trian = trian + 0;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#CR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#0da59b0139d5f95ba86806b0de656945abf2eb51> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -3201,15 +3153,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#QuickSort.java> .
 
-<mb:mutant#11977e3dba6a9c32c304b39d4b22ad2524ebe0e0> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (a <= 0 || b <= 0 || true) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#11eebc2b8a0fea81cb6c37fa9c7179878f76165a> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -718 +718 @@
@@ -3770,15 +3713,6 @@
     mb:operator <mb:operator#AOIU> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#15003837af91122adf51ac83fdb478cec1fb9235> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c || a + c <= b || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#15166b077460d145b21bc6d6cb51d3a7e83bb813> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -1282 +1282 @@
@@ -3906,15 +3840,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Profit.java> .
 
-<mb:mutant#15c7eda820b2f8fd645092ad010528448708b72a> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (c <= 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#15fff29ee3472d3888314fe3cd4c35a27e2fa631> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -47 +47 @@
@@ -4034,15 +3959,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#QuickSort.java> .
-
-<mb:mutant#16e789a84691946474fab0374bf9b64f9a985497> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (a <= 0 || c <= 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#16e8a0edb87133188b04369d9cad0ec8c9528290> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -4336,16 +4252,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#ArrayUtils.java> .
-
-<mb:mutant#1864de76ae524a16b1724b3205719f61acad0e8c> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -45 +45 @@
--            if (trian == 2 && a + c > b) {
-+            if (trian == 2 && a % c > b) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#1877ab8c42e7b61e9f7a7835dc2a4497622d8ff2> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -4845,15 +4751,6 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Defroster.java> .
 
-<mb:mutant#1ba83dc8ab604192fefd25477ce069a7113d730f> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (b <= 0 || c <= 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#1ba956bc1075de21889c9604a4dacb9855caa9fd> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -2012 +2012 @@
@@ -4998,16 +4895,6 @@
         <mb:operator#SEOD>,
         <mb:operator#VDL> ;
     mb:program <mb:program#ArrayUtils.java> .
-
-<mb:mutant#1c6fe2c78381b424eaffb0107f1dc9c8cbde0699> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a % b < c || a + c < b || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#1c8ad5cc6751dd7edd290d906bb395b91ab65d3b> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -5178,16 +5065,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Calendar.c> .
-
-<mb:mutant#1d5f6fed723f43c7cccdd570b8e9b836b3a8f623> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -45 +45 @@
--            if (trian == 2 && a + c > b) {
-+            if (trian == 2 && a - c > b) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#1d6207e34763ee017c6313786673680d2c0a056f> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -5641,16 +5518,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Triangle.java> .
 
-<mb:mutant#1fb197bd93acfa7806614df2ee4843b38eb08f60> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -27 +27 @@
--            trian = trian + 2;
-+            trian = trian - 2;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#1fb56bb0636beb81853962887c935434549f6b0e> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -4572 +4572 @@
@@ -5660,15 +5527,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Space.c> .
-
-<mb:mutant#1fbcaf0b10a671ff427189e1955987c050013b8a> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -48 +48 @@
--                if (trian == 3 && b + c > a) {
-+                if (trian == 3 && false) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#1fca45e3b61cd64612fb6a530483ad27ca320cec> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -5718,16 +5576,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#FCDL> ;
     mb:program <mb:program#QuickSort.java> .
-
-<mb:mutant#20401e2dafe34e5724905bed1668db9056fa1bea> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -42 +42 @@
--        if (trian == 1 && a + b > c) {
-+        if (trian == 1 && a / b > c) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#20600a9eb5ab6fe15e9cb702012f1dbe155eedd9> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -6312,15 +6160,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#StringTokenizer.java> .
 
-<mb:mutant#23ae97fe99f5e5cc05ff02c5f23735b1de0ab0ca> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (false || a + c < b || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#23bbb28d88c98c2d4e0063ca1e50d54ccdd3ff0e> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -58 +58 @@
@@ -6330,16 +6169,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Replace.c> .
-
-<mb:mutant#23cf9f56edc54237416a701253467f7d0ad2baa3> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -45 +45 @@
--            if (trian == 2 && a + c > b) {
-+            if (trian == 2 && a * c > b) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#23d1885ad491fb42e44d1479a0feb200b2b33f9a> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -6696,16 +6525,6 @@
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#266252f2c1a7ceb45499b926c28605428d2bf650> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c || a + c < b || b / c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#26766ee0c7f9064620a0f3a81371c5961288a582> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -8 +8 @@
@@ -6735,15 +6554,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Hashmap.c> .
-
-<mb:mutant#26bea0be1af1f00c9a9045401f3461ac859c236a> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c || a + c < b) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#26e0eeb381d003ca5346a950702055b12cfb2b02> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -7493,16 +7303,6 @@
     mb:operator <mb:operator#LOI> ;
     mb:program <mb:program#StringTokenizer.java> .
 
-<mb:mutant#2ba6dac45f5e41e5f2cc8a9dd47cc31cc6e4babf> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -48 +48 @@
--                if (trian == 3 && b + c > a) {
-+                if (trian == 0 && b + c > a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#CR> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#2bade015703c91c924b6de57e814dfd321803271> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -47 +47 @@
@@ -7613,16 +7413,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#Bisect.java> .
-
-<mb:mutant#2c565c4246f0ee4c0a877c3cef5935edb55192d3> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -42 +42 @@
--        if (trian == 1 && a + b > c) {
-+        if (trian == 1 && a % b > c) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#2c5ae37404f43596830a409ec8e0a032e2c46711> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -8030,15 +7820,6 @@
     mb:operator <mb:operator#AOIU> ;
     mb:program <mb:program#XmlFriendlyNameCoder.java> .
 
-<mb:mutant#2e691f2a6d2cf042085404bc5c3e7f6094e4d4dc> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (true || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#2e7294758f2de3c139f979e2dfd017d7d847579c> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -303 +303 @@
@@ -8091,15 +7872,6 @@
     mb:operator <mb:operator#ROD>,
         <mb:operator#VDL> ;
     mb:program <mb:program#StringTokenizer.java> .
-
-<mb:mutant#2e8e11ca1c7be8e066deb30ab1910cb49bf9af24> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -42 +42 @@
--        if (trian == 1 && a + b > c) {
-+        if (trian == 1 && false) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#2e9c654d139348058a6925167150c531ec2ec89d> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -8698,15 +8470,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#QuickSort.java> .
 
-<mb:mutant#31e1aa9b95a7240d57f8974ad46924cd53a29945> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#31f480b0e451456e3823ff12ee645e4c895d1f98> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -158 +158 @@
@@ -9103,15 +8866,6 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Defroster.java> .
 
-<mb:mutant#3426a26bb2c12c1a01aa0591d20cd5572368bc74> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -42 +42 @@
--        if (trian == 1 && a + b > c) {
-+        if (false) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#342d891e013324dd275ad21e744f2ccc7fcffd8a> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -757 +757 @@
@@ -9236,15 +8990,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIU> ;
     mb:program <mb:program#StringTokenizer.java> .
-
-<mb:mutant#350542ff5cb65e7afa14f91a68330269e4be92cb> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c || a + c < b || b + c <= a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#350a61414ad80001a97786f89d2509562f23bcd7> a mb:Mutant ;
     schema:citation <mb:paper#MutantDistiller> ;
@@ -9879,16 +9624,6 @@
         <mb:operator#SEOD> ;
     mb:program <mb:program#Triangle.java> .
 
-<mb:mutant#3956653172cd4c9173d3b72a547fcabc0a79a49b> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -27 +27 @@
--            trian = trian + 2;
-+            trian = trian / 2;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#3961fd7a1bcf66eacd52570198b2626758b0250e> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -52 +52 @@
@@ -9918,15 +9653,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#ArrayUtils.java> .
-
-<mb:mutant#398f77162d2030496a8416a8c31cf7bf1ce3f8ea> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (a <= 0 || b < 0 || c <= 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#3996e6d550a9ed1b1267d94a2969157ae775297f> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -10516,16 +10242,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Bisect.java> .
 
-<mb:mutant#3cfe1c5e98bd72f162d7beb99478a62918b673db> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (a == 0 || b <= 0 || c <= 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#3d20ea210959203a458545cc380eac31202fe088> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -22 +22 @@
@@ -11093,16 +10809,6 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Make.c> .
 
-<mb:mutant#40549a5c3293cca162f56addd6df9100466b23eb> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -45 +45 @@
--            if (trian == 2 && a + c > b) {
-+            if (trian == -2 && a + c > b) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AOIU> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#40737d31200bf231496e2cafe6542856bae2b505> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -124 +124 @@
@@ -11447,16 +11153,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIU> ;
     mb:program <mb:program#WordUtils.java> .
-
-<mb:mutant#421c3fa34b915ae94848cb3791145b9abd148caa> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b <= c || a + c < b || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#421ddf236729223cb2700d88c97843fe54b0ba74> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -12026,16 +11722,6 @@
     mb:operator <mb:operator#LOI> ;
     mb:program <mb:program#QuickSort.java> .
 
-<mb:mutant#458908c01a28945847b31980a063f815a8f31829> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -45 +45 @@
--            if (trian == 2 && a + c > b) {
-+            if (trian >= 2 && a + c > b) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#4595946ae815ec3d43d2ec1bad6963e2bb134b43> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -115 +115 @@
@@ -12245,16 +11931,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Triangle.java> .
 
-<mb:mutant#470a8a95e0a2f45564cfaa2f11f80981342ad15f> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -32 +32 @@
--        if (trian == 0) {
-+        if (trian >= 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#47136065b71fad114e54bdd779494de51a39b93d> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -420 +420 @@
@@ -12355,15 +12031,6 @@
     mb:operator <mb:operator#AOIU> ;
     mb:program <mb:program#QuickSort.java> .
 
-<mb:mutant#477bd81cebfe28e750088370ab5acd43e63d49d6> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -45 +45 @@
--            if (trian == 2 && a + c > b) {
-+            if (false) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#477f473c1d2259e1d6f493a2c3840da6f8b7df68> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -97 +97 @@
@@ -12435,16 +12102,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#SEOR> ;
     mb:program <mb:program#Make.c> .
-
-<mb:mutant#47effc2fa4e040c7b1737428c699cb3499fc6b15> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -42 +42 @@
--        if (trian == 1 && a + b > c) {
-+        if (trian >= 1 && a + b > c) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#47f36e7a385fe06589351dae1d92879b0bd25515> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -13845,15 +13502,6 @@
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#Simulator.java> .
 
-<mb:mutant#4f874551b7d63a4458262dcf2e9eae544db472f2> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (a <= 0 || true || c <= 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#4fa4e7d9f92295693dc82cf23e8a5b4e9f0edf0a> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -51 +51 @@
@@ -14224,16 +13872,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Mid.c> .
-
-<mb:mutant#51ba6bb8167f0ff9574545304f1d59fb89ed9e2e> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -45 +45 @@
--            if (trian == 2 && a + c > b) {
-+            if (trian == 2 && a / c > b) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#51cf8a45d28633ed664276a286d24cd382aeb50b> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -14932,16 +14570,6 @@
     mb:operator <mb:operator#AOIU> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#5485b60f7a9bf1ad3cb074c9ffe3f58042fe2825> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -42 +42 @@
--        if (trian == 1 && a + b > c) {
-+        if (trian == -1 && a + b > c) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AOIU> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#548ce4489909270f334c74c199c07b67c6db46c2> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -120 +120 @@
@@ -15602,15 +15230,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Triangle.java> .
 
-<mb:mutant#5815e421d6fb4de6ae9505fad50a97870514a179> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if ((a <= 0 || b <= 0) != c <= 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#58364ca51384be152a2754619c9f1619f8202e74> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -2061 +2061 @@
@@ -15964,16 +15583,6 @@
         <mb:operator#VDL> ;
     mb:program <mb:program#StringTokenizer.java> .
 
-<mb:mutant#5a15d84e491046e9f1df5226ec69dceb7f075e8b> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -22 +22 @@
--        trian = 0;
-+        trian = 1;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#CR> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#5a1fdd5b66f332fc3949d4e3f77deff6d2579107> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -161 +161 @@
@@ -16209,16 +15818,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Flex.c> .
-
-<mb:mutant#5b9481f0cf0c04d77adc71ac7ee260e69a43881b> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a - b < c || a + c < b || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#5b9fe08031648c95280449ca9006f13f97e99670> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -16552,16 +16151,6 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Defroster.c> .
 
-<mb:mutant#5deded47723a273c7895c7e73502add0a93444ee> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -48 +48 @@
--                if (trian == 3 && b + c > a) {
-+                if (trian <= 3 && b + c > a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#5df58b5449cb35e49b342420755a25dbca76fdcf> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -2023 +2023 @@
@@ -16571,16 +16160,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#ArrayUtils.java> .
-
-<mb:mutant#5dfa2d976b68325fb347944ed1775f9f19da145b> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -23 +23 @@
--        if (a == b) {
-+        if (a <= b) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#5e012d0c3139775168a3bb05d5fe7ba1b082fa23> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -16972,16 +16551,6 @@
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Replace.c> .
 
-<mb:mutant#5fcbe222aa66f5cc7c38429e6a61292346555e80> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c || a + c < b || b + c != a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#SEOR> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#5fce707db059344ad36937554a248c979be87d28> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -42 +42 @@
@@ -17131,16 +16700,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#Bisect.java> .
-
-<mb:mutant#608c1703656d172d849e85ace8689c26f8c9c5fa> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -24 +24 @@
--            trian = trian + 1;
-+            trian = trian / 1;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#60af96c9098a7c14e27ce53fd5a5a23cdeb169f2> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -17352,16 +16911,6 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#61927ec22a6169d4e8d4814a16c336f676c43238> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -30 +30 @@
--            trian = trian + 3;
-+            trian = trian + -3;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AOIU> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#61beb958ec29875122f819d696f7301f010784f5> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -182 +182 @@
@@ -17504,15 +17053,6 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#62ab1688b3686e63aed5c0479073065000efddc3> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -27 +27 @@
--            trian = trian + 2;
-+            trian = trian + -2;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#62dac167b85da1410141dbb2381768783fb63d5c> a mb:Mutant ;
     schema:citation <mb:paper#MutantDistiller> ;
     mb:difference """@@ -23 +23 @@
@@ -17642,15 +17182,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#SAR> ;
     mb:program <mb:program#StringTokenizer.java> .
-
-<mb:mutant#6380f2725399542c9aad5f123859f42c30fe3b32> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -39 +39 @@
--        if (trian > 3) {
-+        if (trian > -3) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#638ca41f81f6bb7181cbc78de83e4da493f2823f> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -17898,15 +17429,6 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Triangle.java> .
 
-<mb:mutant#64f81cef8b82e50144896c7bf6585976162d7adb> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -45 +45 @@
--            if (trian == 2 && a + c > b) {
-+            if (trian == 2 && a + c >= b) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#64f97fbef95136a01e8f4f2295be3b1dbd2feb25> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -146 +146 @@
@@ -17926,16 +17448,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Defroster.c> .
-
-<mb:mutant#6542e3f0d7f1b8b587701c323d2e801a0bc22c81> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -32 +32 @@
--        if (trian == 0) {
-+        if (trian == -1) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#CR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#65469c65693ff153a85118ee7184c7cb80739db6> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -18085,16 +17597,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Defroster.java> .
-
-<mb:mutant#66530b268e56128310922e7771dbfde6eb29f26d> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -26 +26 @@
--        if (a == c) {
-+        if (a >= c) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#6656dd193101a10b4df90952bb1399c77cea1e38> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -19770,15 +19272,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Triangle.c> .
 
-<mb:mutant#6f2730a5b5dee8c1c0bd6493a802fb6f82868154> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (true || c <= 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#6f2cf912222086849d388f911c1ae103965306f8> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -10 +10 @@
@@ -20017,15 +19510,6 @@
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#7086541bacf26cd121e608f2a33835f4a2e1bae1> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + c < b || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#70b127cce98b73f7da5b7f6d58f46ec9888c2041> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -429 +429 @@
@@ -20197,15 +19681,6 @@
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#WordUtils.java> .
 
-<mb:mutant#71c677698798f173d725e4ee5698821e335a0508> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -39 +39 @@
--        if (trian > 3) {
-+        if (trian >= 3) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#71e559845b884502758c71f24b541701a8690636> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -130 +130 @@
@@ -20307,16 +19782,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#StringTokenizer.java> .
-
-<mb:mutant#72b45196decded4ae7971f5709bb7eeba79d825f> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a / b < c || a + c < b || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#72bcdf9a1aaead053f8afec6b83971a706fbd074> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -20690,16 +20155,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#QuickSort.java> .
-
-<mb:mutant#74f4c961a8c2e77662bcc6cc8ceb253add6e24f8> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -42 +42 @@
--        if (trian == 1 && a + b > c) {
-+        if (trian == 1 && a + b != c) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#SEOR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#74ff28f4373c7e20273d201584128ec57561be59> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -21240,16 +20695,6 @@
     mb:operator <mb:operator#LOI> ;
     mb:program <mb:program#StringTokenizer.java> .
 
-<mb:mutant#784e601d601d0efb699a0f1e5e21872b41a6852b> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -27 +27 @@
--            trian = trian + 2;
-+            trian = trian * 2;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#785e2e681718e682740fcc382872f3b07b550865> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -22 +22 @@
@@ -21362,16 +20807,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Defroster.java> .
-
-<mb:mutant#78a51bc788161fc1e477721ff295093ec5060001> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -39 +39 @@
--        if (trian > 3) {
-+        if (trian != 3) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#SEOR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#78be4a66298a5fa64c829694298a88466fff31ac> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -21534,15 +20969,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#StringTokenizer.java> .
-
-<mb:mutant#7a0949c9e403f089979fc7ccc2eb9cba89f776bf> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -45 +45 @@
--            if (trian == 2 && a + c > b) {
-+            if (trian == 2 && false) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#7a0ecd4952322692c4c3a9fd6c0331d981556cdb> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -21755,16 +21181,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Replace.c> .
-
-<mb:mutant#7b778198443cd2ed0758f0da783ea363d2b825b5> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c || a * c < b || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#7b89bf72cf6d8b3aa3c43eafea0151b48b2a322e> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -21991,15 +21407,6 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#StringTokenizer.java> .
 
-<mb:mutant#7d07873386f82946f055c7c6ba60bdfb724899ad> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (a <= -1 || b <= -1 || c <= -1) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#7d173c232de5b06d7dfa916cda3965d9b322af79> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -140 +140 @@
@@ -22220,15 +21627,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Replace.c> .
-
-<mb:mutant#7e09a2e8d0e041d2382cc9b7af68c3a150ce3e27> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -26 +26 @@
--        if (a == c) {
-+        if (false) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#7e0e2d0ad9a6b1ac17fce853e3090048e842459a> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -22546,16 +21944,6 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#XmlFriendlyNameCoder.java> .
 
-<mb:mutant#806060253524f5fc58c912ff878768f03c57f935> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -42 +42 @@
--        if (trian == 1 && a + b > c) {
-+        if (trian == 1 && a - b > c) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#806b64ec503785ed65e052daa93216a21e45d406> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -27 +27 @@
@@ -22614,16 +22002,6 @@
 """ ;
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Triangle.java> .
-
-<mb:mutant#80c5ef1e977bd27ff1604e045ad54706a2c648b7> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -48 +48 @@
--                if (trian == 3 && b + c > a) {
-+                if (trian == 3 && b - c > a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#80e28c07390c7870439e5d8b6fdfbd2a92a1bfef> a mb:Mutant ;
@@ -22788,16 +22166,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Day.java> .
-
-<mb:mutant#81d93de84022536292e007d36ba02f1baf22ed32> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -29 +29 @@
--        if (b == c) {
-+        if (b >= c) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#81dd8bf07c86b04d6fcaac065823240167e960cd> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -23331,16 +22699,6 @@
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#Day.c> .
 
-<mb:mutant#845416752944212b634713cb657199dcf547013d> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -29 +29 @@
--        if (b == c) {
-+        if (b <= c) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#84730ae15cd39c0cf91c07c27a7937750bd68fcc> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -100 +100 @@
@@ -23851,16 +23209,6 @@
     mb:operator <mb:operator#FCDL> ;
     mb:program <mb:program#QuickSort.java> .
 
-<mb:mutant#87ac710cf8d2d6a7406b8638cbe578aa7b111f4d> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -27 +27 @@
--            trian = trian + 2;
-+            trian = trian + 0;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#CR> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#87b276c4bbff4fd32c4c89bf32d80128f54c12a1> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -56 +56 @@
@@ -23946,15 +23294,6 @@
         <mb:operator#SEOD>,
         <mb:operator#SEOI> ;
     mb:program <mb:program#Replace.c> .
-
-<mb:mutant#8866521f7f08f52a121164774b1feac03d9edf5a> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (a <= 1 || b <= 1 || c <= 1) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#886b7f12afbbf5ef30325dfe548dcb53881ca6cf> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -24311,15 +23650,6 @@
         <mb:operator#VDL> ;
     mb:program <mb:program#Simulator.java> .
 
-<mb:mutant#8a52adcc28a92a73a293ceba0d3ba0d35272f174> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -42 +42 @@
--        if (trian == 1 && a + b > c) {
-+        if (trian == 1 && a + b >= c) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#8a596eb656e570ea523f15b73b5b09b858d86c73> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -100 +100 @@
@@ -24485,16 +23815,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Replace.c> .
-
-<mb:mutant#8b727ad7e7393d746dde67fb6ab933485f3e761d> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs(diff) != mEpsilon) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#SEOR> ;
-    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#8b8bdb40513e3d244ce0c71175b4eb7852e36caf> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -24724,16 +24044,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Mid.java> .
-
-<mb:mutant#8d148aae91511117cf2fe46e375c226f2cfe5667> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a * b < c || a + c < b || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#8d2e077dec3e877551cc97c3cb73052e214392b6> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -25397,16 +24707,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#StringTokenizer.java> .
 
-<mb:mutant#906216eb0aa32f6074ba337caa92e53d9a567353> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -26 +26 @@
--        if (a == c) {
-+        if (a <= c) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#906791447158afeb92dbfc290536d324b242ecea> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -327 +321 @@
@@ -25703,16 +25003,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Defroster.c> .
 
-<mb:mutant#91f455d9aebf880d5d90bc4374b2e9bc1b403408> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -30 +30 @@
--            trian = trian + 3;
-+            trian = trian / 3;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#91f8bd02632058eb7cfbb40445dc1e4ff9f2decd> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -1455 +1455 @@
@@ -25895,16 +25185,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Defroster.c> .
 
-<mb:mutant#93d635fcc1da9e0496b410e632f0caf4e9f5344e> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c || a + c < b || b - c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#93e020de1d413b4fb2a2a59bf60c3b9bedb48e2f> a mb:Mutant ;
     schema:citation <mb:paper#MutantDistiller> ;
     mb:difference """@@ -8 +8 @@
@@ -25924,16 +25204,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Bisect.java> .
-
-<mb:mutant#93f56ca5d5aed629181c5596c70548fc91538153> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c || a % c < b || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#9401b253d86871a5e01d15038bb4a6f342ea4ff8> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -26333,16 +25603,6 @@
     mb:operator <mb:operator#AOIU> ;
     mb:program <mb:program#Make.c> .
 
-<mb:mutant#9627c640759a92e96324fe62208586d696a3ccc0> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -48 +48 @@
--                if (trian == 3 && b + c > a) {
-+                if (trian == 3 && b * c > a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#963a8aa1320da4ded44572fbe73cccfe84e24ee7> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -22 +22 @@
@@ -26735,15 +25995,6 @@
     mb:operator <mb:operator#AOIU> ;
     mb:program <mb:program#MathUtils.java> .
 
-<mb:mutant#98f21bab16610a76ceacf5d7985b184219bae0ed> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -42 +42 @@
--        if (trian == 1 && a + b > c) {
-+        if (trian == 1 == a + b > c) {
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#98f23f7e20bba9fbefb3d56c9c195fac2b378776> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -194 +194 @@
@@ -27114,15 +26365,6 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#StringTokenizer.java> .
 
-<mb:mutant#9ab4702ac91a7abc946057bae6d9ac30b9cc3ec0> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (false) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Bisect.java> .
-
 <mb:mutant#9aba5ba794a768bee39b46eeb3a48ca68327bf40> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -214 +214 @@
@@ -27486,15 +26728,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#StringTokenizer.java> .
-
-<mb:mutant#9c82870e08ec1c02aefe7f20eee24d1a899fa5b1> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c || false || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#9c8403c39d3b922e8ad2113d9e908d26e9690481> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -28249,15 +27482,6 @@
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Replace.c> .
 
-<mb:mutant#a083b8bd30403908089c870906cf9398e7f429cc> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -48 +48 @@
--                if (trian == 3 && b + c > a) {
-+                if (false && b + c > a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#a084f2eefc2eefcd344bf38ddbf261e5e6dfce97> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -31 +31 @@
@@ -28363,15 +27587,6 @@
     mb:operator <mb:operator#ROD>,
         <mb:operator#VDL> ;
     mb:program <mb:program#StringTokenizer.java> .
-
-<mb:mutant#a182857965a379314b3f8f41bd45d767c1f886df> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -23 +23 @@
--        if (a == b) {
-+        if (false) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#a18d9da74088b3486284a9e70f74eb295ef589f1> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -29649,15 +28864,6 @@
 """ ;
     mb:equivalence "true"^^schema:boolean ;
     mb:program <mb:program#Insert.c> .
-
-<mb:mutant#a93765e9b922219db8e771d9fe48267ad21e3e91> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -42 +42 @@
--        if (trian == 1 && a + b > c) {
-+        if (false && a + b > c) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#a93e78564c5755ad48b2be1527eb61175b011773> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -30997,15 +30203,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Hashmap.c> .
 
-<mb:mutant#b07b2438c05ff012056ba28e9f4c6d823364f341> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c != a + c < b || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#b08d0e02069f43bae986d44c23774c5c850ad4ab> a mb:Mutant ;
     schema:citation <mb:paper#MutantDistiller> ;
     mb:difference """@@ -6,2 +6,2 @@
@@ -31371,16 +30568,6 @@
 """ ;
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Triangle.java> .
-
-<mb:mutant#b280545b6ff1d68a2b267587079fc95132e69ae5> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -23 +23 @@
--        if (a == b) {
-+        if (a >= b) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#b28407d7e974d7d58a00a362c810360a1911f826> a mb:Mutant ;
@@ -31978,16 +31165,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#StringTokenizer.java> .
 
-<mb:mutant#b5a86afe6dc18c108e5d605476c88f19affe3081> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -24 +24 @@
--            trian = trian + 1;
-+            trian = trian % 1;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#b5b43521df75219b7cee63f43c4d189e186ef0f3> a mb:Mutant ;
     schema:citation <mb:paper#MutantDistiller> ;
     mb:difference """@@ -71 +71 @@
@@ -32321,15 +31498,6 @@
     mb:operator <mb:operator#LOI> ;
     mb:program <mb:program#Triangle.java> .
 
-<mb:mutant#b75f399fdc2e6d0d1ec51b73e37ee13369de762b> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c || a + c < b || false) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#b768810f0f448bd225f5a77151c78ed5e4dfd1d1> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -121 +121 @@
@@ -32572,16 +31740,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Defroster.c> .
-
-<mb:mutant#b86598aa552e56f9536ea82ed83ba727a28b6abf> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -48 +48 @@
--                if (trian == 3 && b + c > a) {
-+                if (trian == 3 && b + c != a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#SEOR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#b8762adfa9567c0948daa8fca1ee4a71f7ff2e33> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -33090,15 +32248,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#StringTokenizer.java> .
 
-<mb:mutant#bb353c73bcee9131c402397fcb1f27472bf33a86> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -48 +48 @@
--                if (trian == 3 && b + c > a) {
-+                if (trian == 3 && b + c >= a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#bb3b2e53744a748a67d5bb2b0708fd0da98688cb> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -32 +32 @@
@@ -33260,16 +32409,6 @@
     mb:operator <mb:operator#AOIU> ;
     mb:program <mb:program#Triangle.java> .
 
-<mb:mutant#bbfb3045fee3751d1ad025f18e7fc94f1604e7a9> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -48 +48 @@
--                if (trian == 3 && b + c > a) {
-+                if (trian == 3 && b % c > a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#bc159ea07f4f7001b08d012d9d6762dbaa0180ce> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -32 +32 @@
@@ -33340,16 +32479,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#StringTokenizer.java> .
-
-<mb:mutant#bc4e9f360f862f4f81957fe2b8343571ac4d5c39> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (a <= 0 || b == 0 || c <= 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#bc5cdbda8957efdf577f578114d4d09ebf84e1d4> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -33434,15 +32563,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Insert.java> .
-
-<mb:mutant#bd1066373205c57f6099cb5acb43bb9d543ff3d7> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -45 +45 @@
--            if (trian == 2 && a + c > b) {
-+            if (trian == 2 == a + c > b) {
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#bd3cbb370b509e2ed772cbd09f8bdd39332194df> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -33633,15 +32753,6 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#be11bc40290426eb65275fb2a0751242e47afa46> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -48 +48 @@
--                if (trian == 3 && b + c > a) {
-+                if (trian == -3 && b + c > a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#be1cee27952c4ea3767a5c3e35ac6ace74f35398> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -140 +140 @@
@@ -33672,16 +32783,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#CR> ;
     mb:program <mb:program#ArrayUtils.java> .
-
-<mb:mutant#be7377c8f74c05436a78855864eef21cdf8ccf18> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -45 +45 @@
--            if (trian == 2 && a + c > b) {
-+            if (trian <= 2 && a + c > b) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#be84ab032b80ff339592dfcbffbf222b340d62da> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -34138,16 +33239,6 @@
         <mb:operator#VDL> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#c18089f32f4ac149d410c610e927f3c86f5bf493> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (a <= 0 || b <= 0 || c == 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#c192c055a9707ce5015f2ab824624105ff4a5b18> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -41 +41 @@
@@ -34471,16 +33562,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#StringTokenizer.java> .
 
-<mb:mutant#c2d2316274aad9104c3ca9456ed1905026d0929e> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -48 +48 @@
--                if (trian == 3 && b + c > a) {
-+                if (trian == 3 && b / c > a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#c2f39fb764235158475b08f36482ea897c0a2325> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -93 +93 @@
@@ -34793,16 +33874,6 @@
     mb:operator <mb:operator#SAR> ;
     mb:program <mb:program#StringTokenizer.java> .
 
-<mb:mutant#c4bcf7222f71439b8b5849f032d4a4b44c741059> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c || a / c < b || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#c4f20e33956a31954b692397f095776b1dbefbac> a mb:Mutant ;
     schema:citation <mb:paper#MutantDistiller> ;
     mb:difference """@@ -70 +70 @@
@@ -35020,16 +34091,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Replace.c> .
 
-<mb:mutant#c6352c92013c7035d39862fbd4bb786443e40025> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -24 +24 @@
--            trian = trian + 1;
-+            trian = trian * 1;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#c670766e07008cae069ceb4f7b4c42be0e411664> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -13 +13 @@
@@ -35100,15 +34161,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#Vector3D.java> .
-
-<mb:mutant#c6c4780adc18478d123d5a6d33afe1511d90ae6c> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (a <= 0 || b <= 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#c6d486099117d11339949fbce28ebb14478fc9c3> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -35436,26 +34488,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Defroster.java> .
 
-<mb:mutant#c80cfd946267b273690f9cf0fe7591ea0bd67c34> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -42 +42 @@
--        if (trian == 1 && a + b > c) {
-+        if (trian == 0 && a + b > c) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#CR> ;
-    mb:program <mb:program#Triangle.java> .
-
-<mb:mutant#c812f10c53e76d7fc0448ffeff3bfdf5bb473912> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (a <= 0 || b <= 0 || c < 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#c8144b98a750e42664bf4888175c462962fc313a> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -168 +168 @@
@@ -35638,16 +34670,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Defroster.java> .
 
-<mb:mutant#c91e955b1f67514e0062ce7d654e83ade9ce86f2> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c || a + c < b || b * c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#c953cffe91ef2fa5ec2031f755b753305721e75d> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -18 +18 @@
@@ -35758,15 +34780,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#bubble.c> .
-
-<mb:mutant#c9fb6d4628072af1c805b335012eb193ce4a1b90> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -48 +48 @@
--                if (trian == 3 && b + c > a) {
-+                if (trian == 3 == b + c > a) {
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#ca06ba14ae816478a4623a0ee791cd0e6d210fb6> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -36444,15 +35457,6 @@
     mb:operator <mb:operator#LOI> ;
     mb:program <mb:program#StringTokenizer.java> .
 
-<mb:mutant#cdfef53088d50095172e64ef0f08ac9354dd0d53> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -48 +48 @@
--                if (trian == 3 && b + c > a) {
-+                if (false) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#ce01cb5dabc0a21b684673509b6531dbdf51118e> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -496 +496 @@
@@ -36564,16 +35568,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#LOI> ;
     mb:program <mb:program#QuickSort.java> .
-
-<mb:mutant#cef0ce203b3a0fcadcc0f30f96a93a5c8382bba4> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b != c || a + c < b || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#SEOR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#cf04b7a581cb92cda32457dbda669a4728d89a66> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -37107,16 +36101,6 @@
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#Defroster.java> .
 
-<mb:mutant#d182da1fe189c1857b30c765ddf061d99d8c414c> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -30 +30 @@
--            trian = trian + 3;
-+            trian = trian % 3;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#d1840a6d6a6c436277bbc86eb8c93ee491fdc847> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -193 +193 @@
@@ -37430,16 +36414,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#CR> ;
     mb:program <mb:program#ArrayUtils.java> .
-
-<mb:mutant#d352d330baa1f25534f8c856f6b17db01bce66aa> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -24 +24 @@
--            trian = trian + 1;
-+            trian = trian - 1;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#d37a22f5c57fd22e661a880d981410bd7f57b65c> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -37935,15 +36909,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Replace.c> .
-
-<mb:mutant#d5dd0703320a07b0fd2205a5712a174595838197> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -29 +29 @@
--        if (b == c) {
-+        if (false) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#d5e7f88f22211522061266305ad568f2d2afc94c> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -38687,16 +37652,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Defroster.c> .
 
-<mb:mutant#da6eb45bfe9c5e242afb788a1eb438ff336da215> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -42 +42 @@
--        if (trian == 1 && a + b > c) {
-+        if (trian == 1 && a * b > c) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#da851aa029f2195671e8a8b26ff2137a731afe95> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -1813 +1813 @@
@@ -39117,16 +38072,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Space.c> .
 
-<mb:mutant#dd15c205b58b7d090d2c14b2dcd486bd1e90626b> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -30 +30 @@
--            trian = trian + 3;
-+            trian = trian - 3;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#dd3022bfa2f3a23f48282de5d1cb4cb07c601b1c> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -203 +203 @@
@@ -39242,16 +38187,6 @@
         <mb:operator#VDL> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#ddc016d783005c580c3c3191cf2ce4d014433821> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -45 +45 @@
--            if (trian == 2 && a + c > b) {
-+            if (trian == 0 && a + c > b) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#CR> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#ddcb6b7f1229564c14c771af20aabe1c3e9e67a7> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -436 +436 @@
@@ -39330,15 +38265,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#ADL> ;
     mb:program <mb:program#StringTokenizer.java> .
-
-<mb:mutant#de025c62cc9cf22d0a45f8865fd416fd7f6396a3> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (a < 0 || b <= 0 || c <= 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#de52ce4555930c089d7c01461139f1cd7c7ec04f> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -39427,15 +38353,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#WLDL> ;
     mb:program <mb:program#StringTokenizer.java> .
-
-<mb:mutant#de9cf7c633a697064330a054f54e4adf0805177f> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#dec150ebef0754536d979a1fcf5f5d2e3d3a1532> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce>,
@@ -39548,16 +38465,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Defroster.java> .
-
-<mb:mutant#df62077bacfa38abd5b0d63f90579a2b45831554> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -24 +24 @@
--            trian = trian + 1;
-+            trian = trian + 0;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#CR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#df63466ad5238c57a488971a2366b9e06af6314b> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -39924,15 +38831,6 @@
         <mb:operator#CDL> ;
     mb:program <mb:program#QuickSort.java> .
 
-<mb:mutant#e1fc73273f60b3281c3bb2ac89012f04892c7d05> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (true) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#e204389e400e0672f81f373377bc41cc6c265c21> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -51 +50 @@
@@ -39992,16 +38890,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Mid.c> .
-
-<mb:mutant#e286c165c0f26e32ffeecc76d7ff9667b98f15b7> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -45 +45 @@
--            if (trian == 2 && a + c > b) {
-+            if (trian == 2 && a + c != b) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#SEOR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#e28ed55c19d7b31bf93e1db771701d117624b527> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -40885,16 +39773,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Replace.c> .
 
-<mb:mutant#e795ed3c2f35ddfea2a63adcebc14df6256aa0ec> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c || a + c < b || b % c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#e79f20030df2bcf2053773b6588e6ee9ce8c1d0b> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -7 +7 @@
@@ -40985,16 +39863,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Day.c> .
 
-<mb:mutant#e8189647e138b8581a3ad576df6223e1346bec6e> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -39 +39 @@
--        if (trian > 3) {
-+        if (trian > 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#CR> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#e823b80ec4417a87d8e4b33da5160bb789c8805c> a mb:Mutant ;
     schema:citation <mb:paper#MutantDistiller> ;
     mb:difference """@@ -71 +71 @@
@@ -41047,16 +39915,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#StringTokenizer.java> .
-
-<mb:mutant#e882aeb709852c593d30aafeeae20c91e6feca9d> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -22 +22 @@
--        trian = 0;
-+        trian = -1;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#CR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#e88b93a5b7d35e5543b3a6e479d5794231f984a8> a mb:Mutant ;
     schema:citation <mb:paper#MutantDistiller> ;
@@ -41114,16 +39972,6 @@
         <mb:operator#ROD>,
         <mb:operator#VDL> ;
     mb:program <mb:program#ArrayUtils.java> .
-
-<mb:mutant#e900e7f2301ef28beb9a31d51f64785763d1da9f> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -33 +33 @@
--            if (a + b < c || a + c < b || b + c < a) {
-+            if (a + b < c || a - c < b || b + c < a) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#e902c46f4e5e047ec31943ad538b85874a17abc6> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -41195,16 +40043,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Carsimulator.c> .
-
-<mb:mutant#e9613f8cb5b43c7efc220c279b40dad86c2a887d> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -32 +32 @@
--        if (trian == 0) {
-+        if (trian == 1) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#CR> ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#e961f16322d9dd8189ca4791e963efafc2f5acc9> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -41407,15 +40245,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Carsimulator.c> .
-
-<mb:mutant#ea92e1a630f5913b98e8a9ea5af2fb1c31196ece> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (true || b <= 0 || c <= 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#eab56ba1d54a41647596e9947f7c830f3b5e814d> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -41853,15 +40682,6 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Carsimulator.c> .
 
-<mb:mutant#ed370e2faaff8e44355b95f7f321cc3b03d8036a> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -19 +19 @@
--        if (a <= 0 || b <= 0 || c <= 0) {
-+        if (a <= 0 != b <= 0 || c <= 0) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#ed44ce737179053e29845f8923c13b7779257733> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -47 +47 @@
@@ -42146,16 +40966,6 @@
         <mb:operator#VDL> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#ef0a200e75b4c8fb4b61eb9acbddce7446a30fda> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -30 +30 @@
--            trian = trian + 3;
-+            trian = trian * 3;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AORB> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#ef0a3f3f5ecf78437b1c66388c31cea5af16cba1> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -2245 +2245 @@
@@ -42416,15 +41226,6 @@
     mb:operator <mb:operator#ROD>,
         <mb:operator#VDL> ;
     mb:program <mb:program#StringTokenizer.java> .
-
-<mb:mutant#f101f966a0b859ba2a1c08398ae275027f52b4fa> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs(diff) >= mEpsilon) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#f119ed15fa4dfcf1b9be3ce95456ff6f57e10b1d> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -44114,15 +42915,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Insert.c> .
 
-<mb:mutant#fae71f07b86f76b51d4b9066e2683d2f5193e706> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -45 +45 @@
--            if (trian == 2 && a + c > b) {
-+            if (false && a + c > b) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#fae8a510eeb3d0aa86f995af78f1fc9adbb794f8> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -90 +90 @@
@@ -44313,15 +43105,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Triangle.java> .
 
-<mb:mutant#fbc1be5ddcfbac2a67e7af7fcb341efee11b0ccd> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -39 +39 @@
--        if (trian > 3) {
-+        if (false) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#fbc32d71a2dffeb1bc2f428b008fb0248a6a3d81> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -79 +79 @@
@@ -44425,15 +43208,6 @@
 """ ;
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Triangle.java> .
-
-<mb:mutant#fc3202331f16fd4d88dc0b515526a96eb7f17bac> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -24 +24 @@
--            trian = trian + 1;
-+            trian = trian + -1;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
     mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#fc4398c07db2310e02dbe1efaccba23b32f3b86e> a mb:Mutant ;
@@ -44682,15 +43456,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#Simulator.java> .
-
-<mb:mutant#fe72da95ba5c1088ac5606a85d8a4c47c30c9dd1> a mb:Mutant ;
-    schema:contributor <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -32 +32 @@
--        if (trian == 0) {
-+        if (false) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Triangle.java> .
 
 <mb:mutant#fe8845e3e657ea0494e650295a61bab362565dde> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
