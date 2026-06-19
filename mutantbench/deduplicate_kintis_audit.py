@@ -1,11 +1,12 @@
 """Audit and optionally remove redundant Kintis mutant records in dataset.ttl.
 
 Kintis mutants were ingested twice: once with schema:contributor (convert.py)
-and again with schema:citation. When both records share the same equivalence
-label and no other source disagrees, the contributor record is redundant.
+and again with schema:citation. When both Kintis records share the same
+equivalence label, the contributor record is redundant.
 
-Groups with a conflicting Houshmand label (e.g. Kintis EQ vs Houshmand NEQ)
-are intentionally skipped.
+Groups with a conflicting Houshmand label are reported but still deduplicated,
+because this script removes only redundant Kintis copies and does not resolve
+cross-source label conflicts.
 """
 
 from __future__ import annotations
@@ -57,13 +58,13 @@ def parse_mutant_blocks(content: str) -> list[tuple[str, dict]]:
     return records
 
 
-def find_removals(records: list[tuple[str, dict]]) -> tuple[list[dict], list[dict], list[tuple]]:
+def find_removals(records: list[tuple[str, dict]]) -> tuple[list[dict], list[tuple], list[tuple]]:
     by_key: dict[tuple[str, str], list[dict]] = defaultdict(list)
     for _, meta in records:
         by_key[(meta['program'], meta['norm_diff'])].append(meta)
 
     to_remove: list[dict] = []
-    skipped_conflicts: list[tuple] = []
+    reported_conflicts: list[tuple] = []
     skipped_other: list[tuple] = []
 
     for key, group in by_key.items():
@@ -83,15 +84,14 @@ def find_removals(records: list[tuple[str, dict]]) -> tuple[list[dict], list[dic
 
         if len(houshmand) == 1:
             if houshmand[0]['equiv'] != kintis_equiv:
-                skipped_conflicts.append((key, group))
-                continue
+                reported_conflicts.append((key, group))
             to_remove.append([r for r in kintis if r['schema'] == 'contributor'][0])
         elif len(houshmand) == 0 and len(group) == 2:
             to_remove.append([r for r in kintis if r['schema'] == 'contributor'][0])
         else:
             skipped_other.append((key, group, f'houshmand={len(houshmand)} total={len(group)}'))
 
-    return to_remove, skipped_conflicts, skipped_other
+    return to_remove, reported_conflicts, skipped_other
 
 
 def remove_blocks(content: str, block_ids: set[str]) -> str:
@@ -115,10 +115,18 @@ def main() -> None:
     records = parse_mutant_blocks(content)
     to_remove, conflicts, skipped = find_removals(records)
 
+    by_program: dict[str, int] = defaultdict(int)
+    for record in to_remove:
+        by_program[record['program']] += 1
+
     print(f'Mutant blocks parsed: {len(records)}')
     print(f'Redundant contributor records to remove: {len(to_remove)}')
-    print(f'Skipped cross-source label conflicts: {len(conflicts)}')
+    print(f'Reported cross-source label conflicts: {len(conflicts)}')
     print(f'Skipped other patterns: {len(skipped)}')
+    if by_program:
+        print('Affected programs:')
+        for program, count in sorted(by_program.items()):
+            print(f'  {program}: {count}')
 
     if args.apply:
         remove_ids = {r['block_id'] for r in to_remove}
