@@ -33776,16 +33776,6 @@
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Prime_number.c> .
 
-<mb:mutant#bf431e2fe61ade98232fed215a520e336cda7df6> a mb:Mutant ;
-    schema:citation <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -29 +30 @@
--            trian = trian + 3;
-+            trian = trian + 0;
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#CR> ;
-    mb:program <mb:program#Triangle.java> .
-
 <mb:mutant#bf441186ac88736d221da47b2575e4e62bd165b1> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -41 +42 @@
