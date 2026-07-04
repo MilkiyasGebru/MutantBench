@@ -221,19 +221,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:program <mb:program#StringTokenizer.java> .
 
-<mb:mutant#794bf395b60db6b011188ea68310297805969fec> a mb:Mutant ;
-    schema:citation <mb:paper#MutantDistiller> ;
-    mb:difference """@@ -36 +36 @@
--	if(year%400==0||(year%4==0&&year%100!=0))
-+	if(year%400==0||(year%4==0&&year%100!=0))
-@@ -40 +40 @@
--	if(leap==1&&month>2)
-+	if(leap==1&&month++>2)
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Day.java> .
-
 <mb:mutant#01569eade5bd33e99bb822fefed21fd275a24d2f> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -5367 +5367 @@
@@ -895,6 +882,18 @@
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#WordUtils.java> .
 
+<mb:mutant#04b65c9b418ff60f3ce3abac0348cebbb945a4b3> a mb:Mutant ;
+    schema:citation <mb:paper#MutantDistiller> ;
+    mb:difference """@@ -35,2 +35,2 @@
+-	sum=sum+day;
+-	if(year%400==0||(year%4==0&&year%100!=0))
++	sum=sum+abs(day);
++	if(year%400==0||(year%4==0&&year%100!=0))
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Day.java> .
+
 <mb:mutant#04bfcbe8b6e68e6ce528384a0af514ce01b8a184> a mb:Mutant ;
     schema:citation <mb:paper#MutantDistiller> ;
     mb:difference """@@ -32 +32 @@
@@ -1464,19 +1463,6 @@
     mb:operator <mb:operator#VDL> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#8e6f802c71f2dc34789a1e439b3d4661ec2426d3> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -1377 +1377 @@
--	input_files = argv;
-+	input_files = abs(argv);
-@@ -1453 +1452 @@
--		nextecm[csize] = NIL;
-+		nextecm[csize] = -abs(NIL);
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Flex.c> .
-
 <mb:mutant#08185e220f1e98de2c0fc157a2774457b9234dd1> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -186 +186 @@
@@ -1736,16 +1722,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIU> ;
     mb:program <mb:program#Triangle.java> .
-
-<mb:mutant#3decccf3b8816983b39c9fa50cddaa5c3c3796f6> a mb:Mutant ;
-    schema:citation <mb:paper#houshmand2017tce> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs( --diff ) > mEpsilon) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#0a1dcf113b1641d4df8f7cd41761894937d7606d> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -2320,19 +2296,6 @@
     mb:operator <mb:operator#VDL> ;
     mb:program <mb:program#WordUtils.java> .
 
-<mb:mutant#0e1a765de0d83c52511686941c1442dbf87ae25f> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -1377 +1377 @@
--	input_files = argv;
-+	input_files = abs(argv);
-@@ -1449 +1448 @@
--			ecgroup[i] = i - 1;
-+			ecgroup[i] = abs(i) - 1;
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Flex.c> .
-
 <mb:mutant#0c727dc4f60ee9466052850a8c9d81ece9244dce> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -374 +374 @@
@@ -2423,19 +2386,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Triangle.java> .
-
-<mb:mutant#189847432f37b04eddcd01b06f021cc038768a10> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -1377 +1377 @@
--	input_files = argv;
-+	input_files = abs(argv);
-@@ -1778 +1777 @@
--			tblsiz = tblsiz + numecs;
-+			tblsiz = tblsiz + abs(numecs);
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Flex.c> .
 
 <mb:mutant#0cdc25dfc793cf9c2a8c9c617da0a9a3a9da9149> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -2616,6 +2566,19 @@
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#Calendar.c> .
 
+<mb:mutant#0e1a765de0d83c52511686941c1442dbf87ae25f> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -1377 +1377 @@
+-	input_files = argv;
++	input_files = abs(argv);
+@@ -1449 +1448 @@
+-			ecgroup[i] = i - 1;
++			ecgroup[i] = abs(i) - 1;
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Flex.c> .
+
 <mb:mutant#0e20b4b98da52063b3b7dd20f3074f496cfff489> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -23 +23 @@
@@ -2636,26 +2599,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Triangle.java> .
-
-<mb:mutant#8959db8634706a33da935d9551d57c1883977f65> a mb:Mutant ;
-    schema:citation <mb:paper#houshmand2017tce> ;
-    mb:difference """@@ -29,12 +28,0 @@
--        while (Math.abs(diff) > mEpsilon) {
--            if (diff < 0) {
--                m = x;
--                x = (M + x) / 2;
--            } else {
--                if (diff > 0) {
--                    M = x;
--                    x = (m + x) / 2;
--                }
--            }
--            diff = x * x - N;
--        }
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#WLDL> ;
-    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#0e6ceec76c7531390a5282ef186e068f808ca4d1> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -2709,15 +2652,6 @@
         <mb:operator#ROD>,
         <mb:operator#VDL> ;
     mb:program <mb:program#StringTokenizer.java> .
-
-<mb:mutant#cc3904d03f88f7222920bcef85843a3dc92aada1> a mb:Mutant ;
-    schema:citation <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -269 +269 @@
--    if ((x >= -threshold) && (x <= threshold)) {
-+    if ((x >= threshold) && (x <= threshold)) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:program <mb:program#Vector3D.java> .
 
 <mb:mutant#0edc58fadf16de9daec35542b439bff15965afe1> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -2991,16 +2925,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#QuickSort.java> .
-
-<mb:mutant#d161ea0ccad4f5e759b2c4c47a8dbdefeaaf374f> a mb:Mutant ;
-    schema:citation <mb:paper#houshmand2017tce> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs( diff-- ) > mEpsilon) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#1090666951a6c6ae3a5a74119a7402e4e597153e> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -3330,6 +3254,16 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#ArrayUtils.java> .
+
+<mb:mutant#12d90cce70eef21c1a302910a1e10a5b2d3fc68b> a mb:Mutant ;
+    schema:citation <mb:paper#houshmand2017tce> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (Math.abs( ++diff ) > mEpsilon) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#12dd8a7f1de98a8ce8affda2c92323f256f23c2c> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -4085,16 +4019,6 @@
     mb:operator <mb:operator#LOI> ;
     mb:program <mb:program#StringTokenizer.java> .
 
-<mb:mutant#f101f966a0b859ba2a1c08398ae275027f52b4fa> a mb:Mutant ;
-    schema:citation <mb:paper#houshmand2017tce> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs(diff) >= mEpsilon) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Bisect.java> .
-
 <mb:mutant#17088578888a6223176a94a96d3c78e19f0a912b> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -47 +47 @@
@@ -4366,6 +4290,19 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#Calendar.c> .
+
+<mb:mutant#189847432f37b04eddcd01b06f021cc038768a10> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -1377 +1377 @@
+-	input_files = argv;
++	input_files = abs(argv);
+@@ -1778 +1777 @@
+-			tblsiz = tblsiz + numecs;
++			tblsiz = tblsiz + abs(numecs);
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Flex.c> .
 
 <mb:mutant#18bb3b392e640efdbcaebaec45c80fea042d174b> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -5238,6 +5175,18 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Triangle.java> .
+
+<mb:mutant#1db695a479c541b93a3f9f112ca5853df6be0193> a mb:Mutant ;
+    schema:citation <mb:paper#MutantDistiller> ;
+    mb:difference """@@ -35,2 +35,2 @@
+-	sum=sum+day;
+-	if(year%400==0||(year%4==0&&year%100!=0))
++	sum=sum+day--;
++	if(year%400==0||(year%4==0&&year%100!=0))
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Day.java> .
 
 <mb:mutant#1dbc9aa2427bf3416cfc9867e55411df36e710ea> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -6656,6 +6605,19 @@
     mb:operator <mb:operator#SEOI> ;
     mb:program <mb:program#QuickSort.java> .
 
+<mb:mutant#2638947ce13fded92e4819be1ee6d1ad40bca1d7> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -1377 +1377 @@
+-	input_files = argv;
++	input_files = abs(argv);
+@@ -1431 +1431 @@
+-	firstprot = NIL;
++	firstprot = -abs(NIL);
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Flex.c> .
+
 <mb:mutant#2643b656eb03d4b71368d3488f73a395158f723e> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -49 +49 @@
@@ -7246,6 +7208,16 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#ArrayUtils.java> .
 
+<mb:mutant#29fafc8cebd4d73a384486559e33f52741f06025> a mb:Mutant ;
+    schema:citation <mb:paper#houshmand2017tce> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (Math.abs(diff) > ++mEpsilon) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Bisect.java> .
+
 <mb:mutant#2a39011a6ee45e001c480b54418e8d2acc563413> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -411 +411 @@
@@ -7768,18 +7740,6 @@
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Hashmap.c> .
 
-<mb:mutant#c2876e388858cd3fa06c3d4885779e2594733ecf> a mb:Mutant ;
-    schema:citation <mb:paper#MutantDistiller> ;
-    mb:difference """@@ -35,2 +35,2 @@
--	sum=sum+day;
--	if(year%400==0||(year%4==0&&year%100!=0))
-+	sum=sum+day++;
-+	if(year%400==0||(year%4==0&&year%100!=0))
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Day.java> .
-
 <mb:mutant#2d0a85ef38d5a8d383ea507c93a504c6d3e76886> a mb:Mutant ;
     schema:citation <mb:paper#MutantDistiller> ;
     mb:difference """@@ -210 +210 @@
@@ -7859,6 +7819,19 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Space.c> .
+
+<mb:mutant#2d653ea55f3b36ffac1fece33504341f7ceb18c8> a mb:Mutant ;
+    schema:citation <mb:paper#MutantDistiller> ;
+    mb:difference """@@ -36 +36 @@
+-	if(year%400==0||(year%4==0&&year%100!=0))
++	if(year%400==0||(year%4==0&&year%100!=0))
+@@ -40 +40 @@
+-	if(leap==1&&month>2)
++	if(leap--==1&&month>2)
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Day.java> .
 
 <mb:mutant#2d666837c0eb4434eb53cb3f6da82abca20f1f17> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -8726,19 +8699,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:program <mb:program#Triangle.java> .
 
-<mb:mutant#9105ab45127bf5671115a68567c018af2dad3d81> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -1377 +1377 @@
--	input_files = argv;
-+	input_files = abs(argv);
-@@ -1555 +1554 @@
--		infilename = file;
-+		infilename = abs(file);
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Flex.c> .
-
 <mb:mutant#322907beb6cc0e4f3bab7215803f8e6c030bd564> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -161 +161 @@
@@ -8985,16 +8945,6 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Bisect.java> .
 
-<mb:mutant#12d90cce70eef21c1a302910a1e10a5b2d3fc68b> a mb:Mutant ;
-    schema:citation <mb:paper#houshmand2017tce> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs( ++diff ) > mEpsilon) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Bisect.java> .
-
 <mb:mutant#3397afdec5b60a5e7e7dfcb19c581416f3ef8745> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -269 +269 @@
@@ -9131,16 +9081,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Defroster.java> .
-
-<mb:mutant#35cac6b6c814ce01e6400feea26b2c4dd346b653> a mb:Mutant ;
-    schema:citation <mb:paper#houshmand2017tce> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs(diff) > --mEpsilon) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#343b2a414eab98fcdc0dab4cda73db648e7956dd> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -9326,6 +9266,16 @@
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#Triangle.java> .
 
+<mb:mutant#35cac6b6c814ce01e6400feea26b2c4dd346b653> a mb:Mutant ;
+    schema:citation <mb:paper#houshmand2017tce> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (Math.abs(diff) > --mEpsilon) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Bisect.java> .
+
 <mb:mutant#35d644a29449fa84517c7969dd3312c862338d73> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -1416 +1416 @@
@@ -9500,16 +9450,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#CR> ;
     mb:program <mb:program#MathUtils.java> .
-
-<mb:mutant#8b727ad7e7393d746dde67fb6ab933485f3e761d> a mb:Mutant ;
-    schema:citation <mb:paper#houshmand2017tce> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs(diff) != mEpsilon) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#37002979653ddbd01a2b02f2b5e74f97653c987e> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -10214,6 +10154,16 @@
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Schedule.c> .
 
+<mb:mutant#3b5c785f6c070f40d4f3a9cd60fdee31b1a17adf> a mb:Mutant ;
+    schema:citation <mb:paper#MutantDistiller> ;
+    mb:difference """@@ -36 +36 @@
+-	if(year%400==0||(year%4==0&&year%100!=0))
++	if(year%400==0||(year%4==0&&year%100>0))
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ROR> ;
+    mb:program <mb:program#Day.java> .
+
 <mb:mutant#3b85a132a4fc66293c48178b98671749fc124f3f> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -72 +72 @@
@@ -10729,6 +10679,16 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#ADL> ;
     mb:program <mb:program#QuickSort.java> .
+
+<mb:mutant#3decccf3b8816983b39c9fa50cddaa5c3c3796f6> a mb:Mutant ;
+    schema:citation <mb:paper#houshmand2017tce> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (Math.abs( --diff ) > mEpsilon) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#3deeb59fbae421800d22aac3f7664979b510e27c> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -11399,6 +11359,16 @@
     mb:operator <mb:operator#AOIU> ;
     mb:program <mb:program#ArrayUtils.java> .
 
+<mb:mutant#41e7be3807d72967db1bc079b4057802336de509> a mb:Mutant ;
+    schema:citation <mb:paper#houshmand2017tce> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (!(Math.abs( diff ) > mEpsilon)) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#SEOI> ;
+    mb:program <mb:program#Bisect.java> .
+
 <mb:mutant#41ee974930e3309857f8b5cb0aa2bdad6d21791b> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -44 +44 @@
@@ -11610,16 +11580,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Tcas.c> .
-
-<mb:mutant#c828dbbbfda4861a3567add69cb267325a0a8ddc> a mb:Mutant ;
-    schema:citation <mb:paper#houshmand2017tce> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs( diff++ ) > mEpsilon) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#432e1b5585b0a639d2b2495c09f7e53121d7ed92> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -11862,6 +11822,16 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#XmlFriendlyNameCoder.java> .
+
+<mb:mutant#44949483f3a6b83bb4c5d86cf58a97cae35425e3> a mb:Mutant ;
+    schema:citation <mb:paper#MutantDistiller> ;
+    mb:difference """@@ -14 +14 @@
+-			if(a[i]<a[j])
++			if(a[i]<=a[j])
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ROR> ;
+    mb:program <mb:program#Bubble.java> .
 
 <mb:mutant#44994785a8fc0f8bc1a59f6626cde4a81bd0162b> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -12235,6 +12205,19 @@
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Replace.c> .
 
+<mb:mutant#470212dfe38ff2becfe19365be21c006bb3dcd7b> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -1377 +1377 @@
+-	input_files = argv;
++	input_files = abs(argv);
+@@ -1445 +1445 @@
+-		ecgroup[1] = NIL;
++		ecgroup[1] = abs(NIL);
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Flex.c> .
+
 <mb:mutant#4707c7ffd019330d2ec4bb3d00ff2a915579073b> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -18 +18 @@
@@ -12393,18 +12376,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Triangle.java> .
-
-<mb:mutant#1db695a479c541b93a3f9f112ca5853df6be0193> a mb:Mutant ;
-    schema:citation <mb:paper#MutantDistiller> ;
-    mb:difference """@@ -35,2 +35,2 @@
--	sum=sum+day;
--	if(year%400==0||(year%4==0&&year%100!=0))
-+	sum=sum+day--;
-+	if(year%400==0||(year%4==0&&year%100!=0))
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Day.java> .
 
 <mb:mutant#47ae61a88cb661947c4639e8683faafe94720afc> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -13115,18 +13086,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Triangle.java> .
 
-<mb:mutant#04b65c9b418ff60f3ce3abac0348cebbb945a4b3> a mb:Mutant ;
-    schema:citation <mb:paper#MutantDistiller> ;
-    mb:difference """@@ -35,2 +35,2 @@
--	sum=sum+day;
--	if(year%400==0||(year%4==0&&year%100!=0))
-+	sum=sum+abs(day);
-+	if(year%400==0||(year%4==0&&year%100!=0))
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Day.java> .
-
 <mb:mutant#4b83a50a1350fd5ac3a0af204ee6adeccc13ecab> a mb:Mutant ;
     schema:citation <mb:paper#MutantDistiller> ;
     mb:difference """@@ -70 +70 @@
@@ -13296,6 +13255,19 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#SEOI> ;
     mb:program <mb:program#Triangle.java> .
+
+<mb:mutant#4c61c8d46a859008d4d52c392c7ff52777c00044> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -1377 +1377 @@
+-	input_files = argv;
++	input_files = abs(argv);
+@@ -1461 +1460 @@
+-			ecgroup[i] = i;
++			ecgroup[i] = abs(i);
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Flex.c> .
 
 <mb:mutant#4c6825e5a0038438b7a86629e936021025644a55> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -13916,19 +13888,6 @@
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Make.c> .
 
-<mb:mutant#518f1c73928851e5578db039a643de1c5f5188c1> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -1377 +1377 @@
--	input_files = argv;
-+	input_files = abs(argv);
-@@ -1450 +1449 @@
--			nextecm[i - 1] = i;
-+			nextecm[i - 1] = abs(i);
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Flex.c> .
-
 <mb:mutant#4ffb72eef63d906675cd758adb27e99733c46f0b> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -25 +25 @@
@@ -14183,6 +14142,19 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Defroster.java> .
+
+<mb:mutant#518f1c73928851e5578db039a643de1c5f5188c1> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -1377 +1377 @@
+-	input_files = argv;
++	input_files = abs(argv);
+@@ -1450 +1449 @@
+-			nextecm[i - 1] = i;
++			nextecm[i - 1] = abs(i);
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Flex.c> .
 
 <mb:mutant#518fee6ec3d14f6e56b814b9fe2640c91afa8f12> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -14503,19 +14475,6 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Triangle.java> .
 
-<mb:mutant#577b4518dae8f1304d5faefd5a31bd0dac5dada2> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -1377 +1377 @@
--	input_files = argv;
-+	input_files = abs(argv);
-@@ -1778 +1777 @@
--			tblsiz = tblsiz + numecs;
-+			tblsiz = abs(tblsiz) + numecs;
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Flex.c> .
-
 <mb:mutant#52ed9c5c51eb8f7e367e4071f94134d061939118> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -41 +41 @@
@@ -14726,16 +14685,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Insert.c> .
-
-<mb:mutant#7110177e6456dca32a29c19fc4dc2781f9667483> a mb:Mutant ;
-    schema:citation <mb:paper#houshmand2017tce> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs(diff) > mEpsilon--) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#53ce3d29279feb095c9064a7cce21ac5d526f479> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -15317,19 +15266,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#StringTokenizer.java> .
 
-<mb:mutant#4c61c8d46a859008d4d52c392c7ff52777c00044> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -1377 +1377 @@
--	input_files = argv;
-+	input_files = abs(argv);
-@@ -1461 +1460 @@
--			ecgroup[i] = i;
-+			ecgroup[i] = abs(i);
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Flex.c> .
-
 <mb:mutant#564cdf116ea669acb501c40a574031724b081f2a> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -121 +121 @@
@@ -15390,18 +15326,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIU> ;
     mb:program <mb:program#MathUtils.java> .
-
-<mb:mutant#99eabcebbd37d892fb5b86f128ce20175b4e4d9d> a mb:Mutant ;
-    schema:citation <mb:paper#MutantDistiller> ;
-    mb:difference """@@ -35,2 +35,2 @@
--	sum=sum+day;
--	if(year%400==0||(year%4==0&&year%100!=0))
-+	sum=abs(sum)+day;
-+	if(year%400==0||(year%4==0&&year%100!=0))
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Day.java> .
 
 <mb:mutant#56b5df440964966aa8b25ad09634fb59ee377e32> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -15495,6 +15419,19 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Carsimulator.c> .
+
+<mb:mutant#577b4518dae8f1304d5faefd5a31bd0dac5dada2> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -1377 +1377 @@
+-	input_files = argv;
++	input_files = abs(argv);
+@@ -1778 +1777 @@
+-			tblsiz = tblsiz + numecs;
++			tblsiz = abs(tblsiz) + numecs;
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Flex.c> .
 
 <mb:mutant#5784348232145aa8f462c52bdaaceb4323155945> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -16323,6 +16260,16 @@
         <mb:operator#VDL> ;
     mb:program <mb:program#QuickSort.java> .
 
+<mb:mutant#5c32e203770f35f13873a48b38f93ffa8728bb90> a mb:Mutant ;
+    schema:citation <mb:paper#houshmand2017tce> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (Math.abs(diff) > mEpsilon++) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Bisect.java> .
+
 <mb:mutant#5c33faa4744afb0152c4a0e21b2bb5016f3ee8b2> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -25 +26 @@
@@ -16591,16 +16538,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Tcas.c> .
-
-<mb:mutant#5c32e203770f35f13873a48b38f93ffa8728bb90> a mb:Mutant ;
-    schema:citation <mb:paper#houshmand2017tce> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs(diff) > mEpsilon++) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#5e1928a157431b26194e5c8f4e94ab8e9e6c3dfc> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -16972,6 +16909,19 @@
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Replace.c> .
 
+<mb:mutant#5fa471422a7021d9a6674425407918d697c54be3> a mb:Mutant ;
+    schema:citation <mb:paper#MutantDistiller> ;
+    mb:difference """@@ -36 +36 @@
+-	if(year%400==0||(year%4==0&&year%100!=0))
++	if(year%400==0||(year%4==0&&year%100!=0))
+@@ -40 +40 @@
+-	if(leap==1&&month>2)
++	if(leap==1&&month-->2)
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Day.java> .
+
 <mb:mutant#5fcbe222aa66f5cc7c38429e6a61292346555e80> a mb:Mutant ;
     schema:contributor <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -33 +33 @@
@@ -16991,16 +16941,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#StringTokenizer.java> .
-
-<mb:mutant#b39d3bb594f0ecab396eb16e25cdc85c79653232> a mb:Mutant ;
-    schema:citation <mb:paper#MutantDistiller> ;
-    mb:difference """@@ -36 +36 @@
--	if(year%400==0||(year%4==0&&year%100!=0))
-+	if(year%400<=0||(year%4==0&&year%100!=0))
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Day.java> .
 
 <mb:mutant#5ff3ee34a0fc4f0370b12778878d7f6ce75b9816> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -17702,6 +17642,19 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#StringTokenizer.java> .
 
+<mb:mutant#63d555ba9769889a8adcfa3e72e2ef59627a99cc> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -1377 +1377 @@
+-	input_files = argv;
++	input_files = abs(argv);
+@@ -1431 +1431 @@
+-	firstprot = NIL;
++	firstprot = abs(NIL);
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Flex.c> .
+
 <mb:mutant#63eddabc1275de1f42991fb654a65be953974f66> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -58 +58 @@
@@ -17851,19 +17804,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Space.c> .
-
-<mb:mutant#a6936d09f3dd6b690c32139a2b8d308fe2d13774> a mb:Mutant ;
-    schema:citation <mb:paper#MutantDistiller> ;
-    mb:difference """@@ -36 +36 @@
--	if(year%400==0||(year%4==0&&year%100!=0))
-+	if(year%400==0||(year%4==0&&year%100!=0))
-@@ -40 +40 @@
--	if(leap==1&&month>2)
-+	if(leap++==1&&month>2)
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Day.java> .
 
 <mb:mutant#649eb51d84d185bcba50c693dd84cb1380c7ce35> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -18055,16 +17995,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#Triangle.java> .
-
-<mb:mutant#8c763df31379e6fdb29c3fa4f8949bb7590b705b> a mb:Mutant ;
-    schema:citation <mb:paper#MutantDistiller> ;
-    mb:difference """@@ -36 +36 @@
--	if(year%400==0||(year%4==0&&year%100!=0))
-+	if(year%400==0||(year%4==0&&year--%100!=0))
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Day.java> .
 
 <mb:mutant#661a8e86fde28b670d381ae912a0cec63d80a7a2> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -18365,16 +18295,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#bubble.c> .
-
-<mb:mutant#29fafc8cebd4d73a384486559e33f52741f06025> a mb:Mutant ;
-    schema:citation <mb:paper#houshmand2017tce> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs(diff) > ++mEpsilon) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#67a76b6dc19aa6d1a2aa407ae5ee2ee0f1c8c059> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -18923,16 +18843,6 @@
     mb:operator <mb:operator#AOIU> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#8b727ad7e7393d746dde67fb6ab933485f3e761d> a mb:Mutant ;
-    schema:citation <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs(diff) != mEpsilon) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Bisect.java> .
-
 <mb:mutant#6a3d80ef32a3957fe99724e55070a4cc05c03204> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -31 +31 @@
@@ -19113,19 +19023,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#LOI> ;
     mb:program <mb:program#BubbleSort.java> .
-
-<mb:mutant#b469b088411e0aef82039c3be92e136478b228ce> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -1377 +1377 @@
--	input_files = argv;
-+	input_files = abs(argv);
-@@ -1445 +1445 @@
--		ecgroup[1] = NIL;
-+		ecgroup[1] = -abs(NIL);
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Flex.c> .
 
 <mb:mutant#6b20330936dd8a64585c3961100419f758430b3c> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -20055,6 +19952,16 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#StringTokenizer.java> .
 
+<mb:mutant#7110177e6456dca32a29c19fc4dc2781f9667483> a mb:Mutant ;
+    schema:citation <mb:paper#houshmand2017tce> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (Math.abs(diff) > mEpsilon--) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Bisect.java> .
+
 <mb:mutant#711bad3749e2435ff95614601b785bfad2ccb38e> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -54 +54 @@
@@ -20868,19 +20775,6 @@
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#QuickSort.java> .
 
-<mb:mutant#a5b90e40738b39107a38a3ae736ca9112ac1c94d> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -1377 +1377 @@
--	input_files = argv;
-+	input_files = abs(argv);
-@@ -1770 +1769 @@
--			tblsiz = tblsiz + csize;
-+			tblsiz = abs(tblsiz) + csize;
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Flex.c> .
-
 <mb:mutant#76497db716451c74b74f33921d2a0297eebd1683> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -763 +763 @@
@@ -21424,6 +21318,19 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Bisect.java> .
+
+<mb:mutant#794bf395b60db6b011188ea68310297805969fec> a mb:Mutant ;
+    schema:citation <mb:paper#MutantDistiller> ;
+    mb:difference """@@ -36 +36 @@
+-	if(year%400==0||(year%4==0&&year%100!=0))
++	if(year%400==0||(year%4==0&&year%100!=0))
+@@ -40 +40 @@
+-	if(leap==1&&month>2)
++	if(leap==1&&month++>2)
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Day.java> .
 
 <mb:mutant#794fb1598d69eb821b35bb128b37b6ab03eedaf7> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -22434,6 +22341,19 @@
     mb:operator <mb:operator#AODU> ;
     mb:program <mb:program#WordUtils.java> .
 
+<mb:mutant#7fc30fbc618b71911896b91770a6ca1bbf400914> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -1377 +1377 @@
+-	input_files = argv;
++	input_files = abs(argv);
+@@ -1770 +1769 @@
+-			tblsiz = tblsiz + csize;
++			tblsiz = tblsiz + abs(csize);
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Flex.c> .
+
 <mb:mutant#7fcec429189b14dab0858bfd22dab21930c3dcca> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -77 +77 @@
@@ -22776,19 +22696,6 @@
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Schedule.c> .
 
-<mb:mutant#2d653ea55f3b36ffac1fece33504341f7ceb18c8> a mb:Mutant ;
-    schema:citation <mb:paper#MutantDistiller> ;
-    mb:difference """@@ -36 +36 @@
--	if(year%400==0||(year%4==0&&year%100!=0))
-+	if(year%400==0||(year%4==0&&year%100!=0))
-@@ -40 +40 @@
--	if(leap==1&&month>2)
-+	if(leap--==1&&month>2)
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Day.java> .
-
 <mb:mutant#81d93de84022536292e007d36ba02f1baf22ed32> a mb:Mutant ;
     schema:contributor <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -29 +29 @@
@@ -23032,19 +22939,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#ArrayUtils.java> .
-
-<mb:mutant#470212dfe38ff2becfe19365be21c006bb3dcd7b> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -1377 +1377 @@
--	input_files = argv;
-+	input_files = abs(argv);
-@@ -1445 +1445 @@
--		ecgroup[1] = NIL;
-+		ecgroup[1] = abs(NIL);
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Flex.c> .
 
 <mb:mutant#831287e7a678603ee37eae97fce01aa1130625d6> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -24085,6 +23979,26 @@
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Tcas.c> .
 
+<mb:mutant#8959db8634706a33da935d9551d57c1883977f65> a mb:Mutant ;
+    schema:citation <mb:paper#houshmand2017tce> ;
+    mb:difference """@@ -29,12 +28,0 @@
+-        while (Math.abs(diff) > mEpsilon) {
+-            if (diff < 0) {
+-                m = x;
+-                x = (M + x) / 2;
+-            } else {
+-                if (diff > 0) {
+-                    M = x;
+-                    x = (m + x) / 2;
+-                }
+-            }
+-            diff = x * x - N;
+-        }
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#WLDL> ;
+    mb:program <mb:program#Bisect.java> .
+
 <mb:mutant#895a93ed23c770e89c8b36b51ae783433e0700f5> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -75 +75 @@
@@ -24404,6 +24318,16 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#StringTokenizer.java> .
 
+<mb:mutant#8accea535ffc18a76dee1c903c2472df2e541fa7> a mb:Mutant ;
+    schema:citation <mb:paper#houshmand2017tce> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (Math.abs(diff) == mEpsilon) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#ROR> ;
+    mb:program <mb:program#Bisect.java> .
+
 <mb:mutant#8ad17bf7f20b4a0148b6d451e18328cf9c92c5ff> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -136 +136 @@
@@ -24485,6 +24409,26 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Replace.c> .
+
+<mb:mutant#8b727ad7e7393d746dde67fb6ab933485f3e761d> a mb:Mutant ;
+    schema:citation <mb:paper#houshmand2017tce> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (Math.abs(diff) != mEpsilon) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#ROR> ;
+    mb:program <mb:program#Bisect.java> .
+
+<mb:mutant#8b727ad7e7393d746dde67fb6ab933485f3e761d> a mb:Mutant ;
+    schema:citation <mb:paper#kintis2016analysing> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (Math.abs(diff) != mEpsilon) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#ROR> ;
+    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#8b727ad7e7393d746dde67fb6ab933485f3e761d> a mb:Mutant ;
     schema:contributor <mb:paper#kintis2016analysing> ;
@@ -24641,6 +24585,16 @@
         <mb:operator#ROD>,
         <mb:operator#VDL> ;
     mb:program <mb:program#ArrayUtils.java> .
+
+<mb:mutant#8c763df31379e6fdb29c3fa4f8949bb7590b705b> a mb:Mutant ;
+    schema:citation <mb:paper#MutantDistiller> ;
+    mb:difference """@@ -36 +36 @@
+-	if(year%400==0||(year%4==0&&year%100!=0))
++	if(year%400==0||(year%4==0&&year--%100!=0))
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Day.java> .
 
 <mb:mutant#8ca7462ec61a75fcc7b18c3696764418945e901a> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -25025,6 +24979,19 @@
     mb:operator <mb:operator#SEOD>,
         <mb:operator#VDL> ;
     mb:program <mb:program#StringTokenizer.java> .
+
+<mb:mutant#8e6f802c71f2dc34789a1e439b3d4661ec2426d3> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -1377 +1377 @@
+-	input_files = argv;
++	input_files = abs(argv);
+@@ -1453 +1452 @@
+-		nextecm[csize] = NIL;
++		nextecm[csize] = -abs(NIL);
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Flex.c> .
 
 <mb:mutant#8eb2d57588c46690567f78699911206635872b98> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -25519,6 +25486,19 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Min.c> .
 
+<mb:mutant#9105ab45127bf5671115a68567c018af2dad3d81> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -1377 +1377 @@
+-	input_files = argv;
++	input_files = abs(argv);
+@@ -1555 +1554 @@
+-		infilename = file;
++		infilename = abs(file);
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Flex.c> .
+
 <mb:mutant#9106f716f24213bf6955e3dda5bc74fc180c0638> a mb:Mutant ;
     schema:citation <mb:paper#MutantDistiller> ;
     mb:difference """@@ -180 +180 @@
@@ -25989,6 +25969,19 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#MathUtils.java> .
+
+<mb:mutant#944467e06983cb520ac466b3b5e118c2344c4065> a mb:Mutant ;
+    schema:citation <mb:paper#MutantDistiller> ;
+    mb:difference """@@ -36 +36 @@
+-	if(year%400==0||(year%4==0&&year%100!=0))
++	if(year%400==0||(year%4==0&&year%100!=0))
+@@ -40 +40 @@
+-	if(leap==1&&month>2)
++	if(leap>=1&&month>2)
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ROR> ;
+    mb:program <mb:program#Day.java> .
 
 <mb:mutant#944863962dfcaa8232e3bffa071935881e62b2ab> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -26941,6 +26934,18 @@
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#Defroster.c> .
 
+<mb:mutant#99eabcebbd37d892fb5b86f128ce20175b4e4d9d> a mb:Mutant ;
+    schema:citation <mb:paper#MutantDistiller> ;
+    mb:difference """@@ -35,2 +35,2 @@
+-	sum=sum+day;
+-	if(year%400==0||(year%4==0&&year%100!=0))
++	sum=abs(sum)+day;
++	if(year%400==0||(year%4==0&&year%100!=0))
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Day.java> .
+
 <mb:mutant#99f3869f7eca0ee34892a6b90db0106e9b7509d9> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -94 +94 @@
@@ -27121,6 +27126,17 @@
 +        while (false) {
 """ ;
     mb:equivalence "false"^^schema:boolean ;
+    mb:program <mb:program#Bisect.java> .
+
+<mb:mutant#9ab4702ac91a7abc946057bae6d9ac30b9cc3ec0> a mb:Mutant ;
+    schema:citation <mb:paper#kintis2016analysing> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (false) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#ROD>,
+        <mb:operator#VDL> ;
     mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#9aba5ba794a768bee39b46eeb3a48ca68327bf40> a mb:Mutant ;
@@ -27321,19 +27337,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#QuickSort.java> .
-
-<mb:mutant#f3f4125a3d5368c755322bd06ff2a0e08fa92787> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -1377 +1377 @@
--	input_files = argv;
-+	input_files = abs(argv);
-@@ -1462 +1461 @@
--			nextecm[i] = BAD_SUBSCRIPT;	/* to catch errors */
-+			nextecm[i] = abs(BAD_SUBSCRIPT);	/* to catch errors */
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Flex.c> .
 
 <mb:mutant#9b972cfc8dd29711fdc80aa1ceec4ca826fb4e83> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -28414,19 +28417,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Profit.java> .
 
-<mb:mutant#5fa471422a7021d9a6674425407918d697c54be3> a mb:Mutant ;
-    schema:citation <mb:paper#MutantDistiller> ;
-    mb:difference """@@ -36 +36 @@
--	if(year%400==0||(year%4==0&&year%100!=0))
-+	if(year%400==0||(year%4==0&&year%100!=0))
-@@ -40 +40 @@
--	if(leap==1&&month>2)
-+	if(leap==1&&month-->2)
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Day.java> .
-
 <mb:mutant#a1a398e84f8ad1edf72f7fc212787a6403925a7b> a mb:Mutant ;
     schema:citation <mb:paper#MutantDistiller> ;
     mb:difference """@@ -117 +117 @@
@@ -29023,6 +29013,32 @@
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Tcas.c> .
 
+<mb:mutant#a57541ecabc61d9158a411232830bc6c403031ee> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -1377 +1377 @@
+-	input_files = argv;
++	input_files = abs(argv);
+@@ -1453 +1452 @@
+-		nextecm[csize] = NIL;
++		nextecm[csize] = abs(NIL);
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Flex.c> .
+
+<mb:mutant#a5b90e40738b39107a38a3ae736ca9112ac1c94d> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -1377 +1377 @@
+-	input_files = argv;
++	input_files = abs(argv);
+@@ -1770 +1769 @@
+-			tblsiz = tblsiz + csize;
++			tblsiz = abs(tblsiz) + csize;
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Flex.c> .
+
 <mb:mutant#a5c8941ddfa7e7b2ee26cff0f940ab736291a4f2> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -413 +413 @@
@@ -29083,6 +29099,19 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:program <mb:program#StringTokenizer.java> .
 
+<mb:mutant#a6494db0c7c431e395f6103a461ce6c29e12d3b7> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -3929 +3929 @@
+-			word[i] = ch;
++			word[i] = ch--;
+@@ -9113 +9113 @@
+-		ch = (*tp)->info;
++		ch = (*tp)->info++;
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Space.c> .
+
 <mb:mutant#a64e447a4ef23a749511f96510517867a8937574> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -104 +104 @@
@@ -29102,6 +29131,16 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Calendar.c> .
+
+<mb:mutant#a651d10ae62c2e5c4c739ed36ba00393279ac64b> a mb:Mutant ;
+    schema:citation <mb:paper#MutantDistiller> ;
+    mb:difference """@@ -36 +36 @@
+-	if(year%400==0||(year%4==0&&year%100!=0))
++	if(year%400==0||(year%4<=0&&year%100!=0))
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ROR> ;
+    mb:program <mb:program#Day.java> .
 
 <mb:mutant#a659e11a8c6e2c3f62cf1bf21cc7d475f7261629> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -29146,6 +29185,19 @@
         <mb:operator#SEOD>,
         <mb:operator#VDL> ;
     mb:program <mb:program#StringTokenizer.java> .
+
+<mb:mutant#a6936d09f3dd6b690c32139a2b8d308fe2d13774> a mb:Mutant ;
+    schema:citation <mb:paper#MutantDistiller> ;
+    mb:difference """@@ -36 +36 @@
+-	if(year%400==0||(year%4==0&&year%100!=0))
++	if(year%400==0||(year%4==0&&year%100!=0))
+@@ -40 +40 @@
+-	if(leap==1&&month>2)
++	if(leap++==1&&month>2)
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Day.java> .
 
 <mb:mutant#a69ff2f9756f292e86a7045a60f04daa8bcc79fb> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -31647,6 +31699,16 @@
     mb:operator <mb:operator#FCDL> ;
     mb:program <mb:program#QuickSort.java> .
 
+<mb:mutant#b39d3bb594f0ecab396eb16e25cdc85c79653232> a mb:Mutant ;
+    schema:citation <mb:paper#MutantDistiller> ;
+    mb:difference """@@ -36 +36 @@
+-	if(year%400==0||(year%4==0&&year%100!=0))
++	if(year%400<=0||(year%4==0&&year%100!=0))
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ROR> ;
+    mb:program <mb:program#Day.java> .
+
 <mb:mutant#b3b7ffbeac7bb799b9cc531ab6982324ed755d49> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -2021 +2021 @@
@@ -31771,6 +31833,19 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#ArrayUtils.java> .
+
+<mb:mutant#b469b088411e0aef82039c3be92e136478b228ce> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -1377 +1377 @@
+-	input_files = argv;
++	input_files = abs(argv);
+@@ -1445 +1445 @@
+-		ecgroup[1] = NIL;
++		ecgroup[1] = -abs(NIL);
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Flex.c> .
 
 <mb:mutant#b48fcb7984024ab6625a5066f1652ec50584c33e> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -32209,6 +32284,16 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#LOI> ;
     mb:program <mb:program#StringTokenizer.java> .
+
+<mb:mutant#b6c58278bd1db87bb299a4665db972a54bad7cc4> a mb:Mutant ;
+    schema:citation <mb:paper#houshmand2017tce> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (Math.abs(diff) < mEpsilon) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#ROR> ;
+    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#b6decd43a48f8ee777f5a1d132da7fc06bc267f8> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -32664,16 +32749,6 @@
         <mb:operator#VDL> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#b6c58278bd1db87bb299a4665db972a54bad7cc4> a mb:Mutant ;
-    schema:citation <mb:paper#houshmand2017tce> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs(diff) < mEpsilon) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Bisect.java> .
-
 <mb:mutant#b8db11a80e9d7183842f32ea74ef0c1cb1fe5909> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -19 +19 @@
@@ -32855,16 +32930,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Triangle.c> .
 
-<mb:mutant#f101f966a0b859ba2a1c08398ae275027f52b4fa> a mb:Mutant ;
-    schema:citation <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs(diff) >= mEpsilon) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Bisect.java> .
-
 <mb:mutant#b9dced236992f9c66d6bb01e31f36254580e07a0> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -273 +273 @@
@@ -32984,16 +33049,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#SEOI> ;
     mb:program <mb:program#StringTokenizer.java> .
-
-<mb:mutant#cd2532bf2200a05c36c4aadd6c3b9bf46216ffad> a mb:Mutant ;
-    schema:citation <mb:paper#MutantDistiller> ;
-    mb:difference """@@ -36 +36 @@
--	if(year%400==0||(year%4==0&&year%100!=0))
-+	if(year%400==0||(year%4==0&&year++%100!=0))
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Day.java> .
 
 <mb:mutant#baf09fd4032f7e64e08bc28c6a8e3b0715f28afd> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
@@ -34113,19 +34168,6 @@
         <mb:operator#VDL> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#fba57ce9e460fbd1e55750634f139cdcc6e507de> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -3929 +3929 @@
--			word[i] = ch;
-+			word[i] = ch++;
-@@ -9113 +9113 @@
--		ch = (*tp)->info;
-+		ch = (*tp)->info++;
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Space.c> .
-
 <mb:mutant#c16981ec8152bdad5b18ee9fdb5e2eeb21a1f206> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -1810 +1810 @@
@@ -34410,6 +34452,18 @@
         <mb:operator#SEOD>,
         <mb:operator#VDL> ;
     mb:program <mb:program#Triangle.java> .
+
+<mb:mutant#c2876e388858cd3fa06c3d4885779e2594733ecf> a mb:Mutant ;
+    schema:citation <mb:paper#MutantDistiller> ;
+    mb:difference """@@ -35,2 +35,2 @@
+-	sum=sum+day;
+-	if(year%400==0||(year%4==0&&year%100!=0))
++	sum=sum+day++;
++	if(year%400==0||(year%4==0&&year%100!=0))
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Day.java> .
 
 <mb:mutant#c293dce40d7f8d78c863e2cb8d2b30395f432be0> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -34980,16 +35034,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Triangle.java> .
 
-<mb:mutant#3b5c785f6c070f40d4f3a9cd60fdee31b1a17adf> a mb:Mutant ;
-    schema:citation <mb:paper#MutantDistiller> ;
-    mb:difference """@@ -36 +36 @@
--	if(year%400==0||(year%4==0&&year%100!=0))
-+	if(year%400==0||(year%4==0&&year%100>0))
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Day.java> .
-
 <mb:mutant#c5ebd05fc74a8e1c7367c76f92f14b7f7ef60ca6> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -113 +113 @@
@@ -35475,6 +35519,16 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIU> ;
     mb:program <mb:program#ArrayUtils.java> .
+
+<mb:mutant#c828dbbbfda4861a3567add69cb267325a0a8ddc> a mb:Mutant ;
+    schema:citation <mb:paper#houshmand2017tce> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (Math.abs( diff++ ) > mEpsilon) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#c82fc724925e70537b6e7093db0b7033ca604cd7> a mb:Mutant ;
     schema:citation <mb:paper#MutantDistiller> ;
@@ -36096,6 +36150,15 @@
         <mb:operator#VDL> ;
     mb:program <mb:program#MathUtils.java> .
 
+<mb:mutant#cc3904d03f88f7222920bcef85843a3dc92aada1> a mb:Mutant ;
+    schema:citation <mb:paper#kintis2016analysing> ;
+    mb:difference """@@ -269 +269 @@
+-    if ((x >= -threshold) && (x <= threshold)) {
++    if ((x >= threshold) && (x <= threshold)) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:program <mb:program#Vector3D.java> .
+
 <mb:mutant#cc39d2ac9c3d6dabc45cf724876901373d5a19a7> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -100 +100 @@
@@ -36298,6 +36361,16 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIU> ;
     mb:program <mb:program#ArrayUtils.java> .
+
+<mb:mutant#cd2532bf2200a05c36c4aadd6c3b9bf46216ffad> a mb:Mutant ;
+    schema:citation <mb:paper#MutantDistiller> ;
+    mb:difference """@@ -36 +36 @@
+-	if(year%400==0||(year%4==0&&year%100!=0))
++	if(year%400==0||(year%4==0&&year++%100!=0))
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Day.java> .
 
 <mb:mutant#cd56a88c85e7d2e05169f06e83c45de631e179d6> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -36523,16 +36596,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Calendar.c> .
 
-<mb:mutant#a651d10ae62c2e5c4c739ed36ba00393279ac64b> a mb:Mutant ;
-    schema:citation <mb:paper#MutantDistiller> ;
-    mb:difference """@@ -36 +36 @@
--	if(year%400==0||(year%4==0&&year%100!=0))
-+	if(year%400==0||(year%4<=0&&year%100!=0))
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Day.java> .
-
 <mb:mutant#ce6f819d4b8a10ee55af8a65dd5dcd1be9efafb8> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -264 +264 @@
@@ -36645,19 +36708,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#LOI> ;
     mb:program <mb:program#QuickSort.java> .
-
-<mb:mutant#63d555ba9769889a8adcfa3e72e2ef59627a99cc> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -1377 +1377 @@
--	input_files = argv;
-+	input_files = abs(argv);
-@@ -1431 +1431 @@
--	firstprot = NIL;
-+	firstprot = abs(NIL);
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Flex.c> .
 
 <mb:mutant#cf89775bf8b6f9cf055fec48940f67e3364b36ef> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -37009,16 +37059,6 @@
     mb:operator <mb:operator#ROR> ;
     mb:program <mb:program#StringTokenizer.java> .
 
-<mb:mutant#41e7be3807d72967db1bc079b4057802336de509> a mb:Mutant ;
-    schema:citation <mb:paper#houshmand2017tce> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (!(Math.abs( diff ) > mEpsilon)) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#SEOI> ;
-    mb:program <mb:program#Bisect.java> .
-
 <mb:mutant#d10c42f75c8f94637fd92d18ae45095ffc6e5f81> a mb:Mutant ;
     schema:citation <mb:paper#yao2015study> ;
     mb:difference """@@ -234 +234 @@
@@ -37077,6 +37117,16 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#OSDL> ;
     mb:program <mb:program#StringTokenizer.java> .
+
+<mb:mutant#d161ea0ccad4f5e759b2c4c47a8dbdefeaaf374f> a mb:Mutant ;
+    schema:citation <mb:paper#houshmand2017tce> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (Math.abs( diff-- ) > mEpsilon) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#d16a2e7b05d0e6816f5e6a595a7bb61a803605c8> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -37320,19 +37370,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Tcas.c> .
-
-<mb:mutant#944467e06983cb520ac466b3b5e118c2344c4065> a mb:Mutant ;
-    schema:citation <mb:paper#MutantDistiller> ;
-    mb:difference """@@ -36 +36 @@
--	if(year%400==0||(year%4==0&&year%100!=0))
-+	if(year%400==0||(year%4==0&&year%100!=0))
-@@ -40 +40 @@
--	if(leap==1&&month>2)
-+	if(leap>=1&&month>2)
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Day.java> .
 
 <mb:mutant#d27f4772cc77207ec988a835a9427fb5c05fa58f> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -37833,19 +37870,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#VDL> ;
     mb:program <mb:program#ArrayUtils.java> .
-
-<mb:mutant#7fc30fbc618b71911896b91770a6ca1bbf400914> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -1377 +1377 @@
--	input_files = argv;
-+	input_files = abs(argv);
-@@ -1770 +1769 @@
--			tblsiz = tblsiz + csize;
-+			tblsiz = tblsiz + abs(csize);
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Flex.c> .
 
 <mb:mutant#d54f49231b3038327ef8a54e32668598f815656a> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -38434,16 +38458,6 @@
         <mb:operator#SEOD>,
         <mb:operator#SEOI> ;
     mb:program <mb:program#Replace.c> .
-
-<mb:mutant#44949483f3a6b83bb4c5d86cf58a97cae35425e3> a mb:Mutant ;
-    schema:citation <mb:paper#MutantDistiller> ;
-    mb:difference """@@ -14 +14 @@
--			if(a[i]<a[j])
-+			if(a[i]<=a[j])
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Bubble.java> .
 
 <mb:mutant#d8f30e4a85445b5440c4749c67ddb61e55af6bff> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -39104,19 +39118,6 @@
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Bisect.java> .
 
-<mb:mutant#a6494db0c7c431e395f6103a461ce6c29e12d3b7> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -3929 +3929 @@
--			word[i] = ch;
-+			word[i] = ch--;
-@@ -9113 +9113 @@
--		ch = (*tp)->info;
-+		ch = (*tp)->info++;
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#AOIS> ;
-    mb:program <mb:program#Space.c> .
-
 <mb:mutant#dd15c205b58b7d090d2c14b2dcd486bd1e90626b> a mb:Mutant ;
     schema:contributor <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -30 +30 @@
@@ -39166,17 +39167,6 @@
     mb:equivalence "true"^^schema:boolean ;
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Hashmap.c> .
-
-<mb:mutant#9ab4702ac91a7abc946057bae6d9ac30b9cc3ec0> a mb:Mutant ;
-    schema:citation <mb:paper#kintis2016analysing> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (false) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROD>,
-        <mb:operator#VDL> ;
-    mb:program <mb:program#Bisect.java> .
 
 <mb:mutant#dd5e860378c1e1dbb5dc2259a32030df1e502d8c> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
@@ -41338,16 +41328,6 @@
     mb:operator <mb:operator#CR> ;
     mb:program <mb:program#ArrayUtils.java> .
 
-<mb:mutant#8accea535ffc18a76dee1c903c2472df2e541fa7> a mb:Mutant ;
-    schema:citation <mb:paper#houshmand2017tce> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs(diff) == mEpsilon) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Bisect.java> .
-
 <mb:mutant#ea530f3d3736f8b276ebf154e090601e574af289> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -1422 +1422 @@
@@ -42418,6 +42398,26 @@
     mb:program <mb:program#StringTokenizer.java> .
 
 <mb:mutant#f101f966a0b859ba2a1c08398ae275027f52b4fa> a mb:Mutant ;
+    schema:citation <mb:paper#houshmand2017tce> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (Math.abs(diff) >= mEpsilon) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#ROR> ;
+    mb:program <mb:program#Bisect.java> .
+
+<mb:mutant#f101f966a0b859ba2a1c08398ae275027f52b4fa> a mb:Mutant ;
+    schema:citation <mb:paper#kintis2016analysing> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (Math.abs(diff) >= mEpsilon) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#ROR> ;
+    mb:program <mb:program#Bisect.java> .
+
+<mb:mutant#f101f966a0b859ba2a1c08398ae275027f52b4fa> a mb:Mutant ;
     schema:contributor <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -29 +29 @@
 -        while (Math.abs(diff) > mEpsilon) {
@@ -42506,19 +42506,6 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#QuickSort.java> .
-
-<mb:mutant#a57541ecabc61d9158a411232830bc6c403031ee> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -1377 +1377 @@
--	input_files = argv;
-+	input_files = abs(argv);
-@@ -1453 +1452 @@
--		nextecm[csize] = NIL;
-+		nextecm[csize] = abs(NIL);
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Flex.c> .
 
 <mb:mutant#f18b89f380158d12309e7db9ddf172caa389b758> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -42820,19 +42807,6 @@
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Profit.java> .
 
-<mb:mutant#2638947ce13fded92e4819be1ee6d1ad40bca1d7> a mb:Mutant ;
-    schema:citation <mb:paper#yao2015study> ;
-    mb:difference """@@ -1377 +1377 @@
--	input_files = argv;
-+	input_files = abs(argv);
-@@ -1431 +1431 @@
--	firstprot = NIL;
-+	firstprot = -abs(NIL);
-""" ;
-    mb:equivalence "true"^^schema:boolean ;
-    mb:operator <mb:operator#ABSI> ;
-    mb:program <mb:program#Flex.c> .
-
 <mb:mutant#f32db52b18a00c9837b6ab4e11c7dfa9831e110d> a mb:Mutant ;
     schema:citation <mb:paper#kintis2016analysing> ;
     mb:difference """@@ -39 +39 @@
@@ -42966,6 +42940,19 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIS> ;
     mb:program <mb:program#Triangle.java> .
+
+<mb:mutant#f3f4125a3d5368c755322bd06ff2a0e08fa92787> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -1377 +1377 @@
+-	input_files = argv;
++	input_files = abs(argv);
+@@ -1462 +1461 @@
+-			nextecm[i] = BAD_SUBSCRIPT;	/* to catch errors */
++			nextecm[i] = abs(BAD_SUBSCRIPT);	/* to catch errors */
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#ABSI> ;
+    mb:program <mb:program#Flex.c> .
 
 <mb:mutant#f403296eb6061d7ce96610156f3e51f0b5366dbd> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
@@ -43692,6 +43679,16 @@
     mb:operator <mb:operator#AORB> ;
     mb:program <mb:program#MathUtils.java> .
 
+<mb:mutant#f93133770cb24108f84a4fdb586a0ed00d95255e> a mb:Mutant ;
+    schema:citation <mb:paper#houshmand2017tce> ;
+    mb:difference """@@ -29 +29 @@
+-        while (Math.abs(diff) > mEpsilon) {
++        while (Math.abs(diff) <= mEpsilon) {
+""" ;
+    mb:equivalence "false"^^schema:boolean ;
+    mb:operator <mb:operator#ROR> ;
+    mb:program <mb:program#Bisect.java> .
+
 <mb:mutant#f93a0f75cab0a6f1a20a70e5929b3ac70c72b53c> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
     mb:difference """@@ -31 +31 @@
@@ -44233,16 +44230,6 @@
     mb:operator <mb:operator#ABSI> ;
     mb:program <mb:program#Hashmap.c> .
 
-<mb:mutant#f93133770cb24108f84a4fdb586a0ed00d95255e> a mb:Mutant ;
-    schema:citation <mb:paper#houshmand2017tce> ;
-    mb:difference """@@ -29 +29 @@
--        while (Math.abs(diff) > mEpsilon) {
-+        while (Math.abs(diff) <= mEpsilon) {
-""" ;
-    mb:equivalence "false"^^schema:boolean ;
-    mb:operator <mb:operator#ROR> ;
-    mb:program <mb:program#Bisect.java> .
-
 <mb:mutant#fb732ecfcdd3f4a99372ac4e5d4c2be9a47b4a42> a mb:Mutant ;
     schema:citation <mb:paper#MutantDistiller> ;
     mb:difference """@@ -196 +196 @@
@@ -44302,6 +44289,19 @@
     mb:equivalence "false"^^schema:boolean ;
     mb:operator <mb:operator#AOIU> ;
     mb:program <mb:program#Vector3D.java> .
+
+<mb:mutant#fba57ce9e460fbd1e55750634f139cdcc6e507de> a mb:Mutant ;
+    schema:citation <mb:paper#yao2015study> ;
+    mb:difference """@@ -3929 +3929 @@
+-			word[i] = ch;
++			word[i] = ch++;
+@@ -9113 +9113 @@
+-		ch = (*tp)->info;
++		ch = (*tp)->info++;
+""" ;
+    mb:equivalence "true"^^schema:boolean ;
+    mb:operator <mb:operator#AOIS> ;
+    mb:program <mb:program#Space.c> .
 
 <mb:mutant#fbb5f032c50600d36082a6907a5bd8930d44bbe8> a mb:Mutant ;
     schema:citation <mb:paper#houshmand2017tce> ;
